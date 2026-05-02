@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+message Subscription {
+	message FieldSubscription {
+        string key = 1;
+        string operator = 2;
+        string value = 3;
+    }
+
+    repeated FieldSubscription fieldSubscriptions = 1;
+}

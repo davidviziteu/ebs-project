@@ -1,0 +1,18 @@
+{
+    "publications": 10000,
+    "subscriptions": 10000,
+    "constraints": [
+        {
+            "type": "frequency",
+            "field": "temp",
+            "percent": "=100"
+        },
+        {
+            "type": "operator",
+            "field": "temp",
+            "operator": "=",
+            "percent": "=25"
+        }
+    ],
+    "threads": 1
+}
