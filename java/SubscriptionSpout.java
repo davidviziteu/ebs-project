@@ -21,6 +21,7 @@ public class SubscriptionSpout extends BaseRichSpout {
     private int i = 0;
 
     private String jsonPath;
+    private HashRing hashRing;
 
     private ArrayList<ArrayList<FieldSubscription>> subscriptionList = new ArrayList<>();
 
@@ -28,13 +29,20 @@ public class SubscriptionSpout extends BaseRichSpout {
     {
         super();
         jsonPath = path;
+        this.hashRing = new HashRing();
     }
 
     public void open(Map<String, Object> conf, TopologyContext context, SpoutOutputCollector collector) {
 
         this.collector = collector;
         this.task = context.getThisComponentId();
-        int currentId = Integer.parseInt(this.task.substring(this.task.length()-1));
+
+        // Initialize hash ring with available brokers
+        // Get number of broker tasks from topology context
+        int brokerCount = 3; // Default, can be made configurable
+        for (int j = 1; j <= brokerCount; j++) {
+            hashRing.addNode("broker" + j);
+        }
 
         Gson gson = new Gson();
         try
@@ -43,9 +51,6 @@ public class SubscriptionSpout extends BaseRichSpout {
             InputData data = gson.fromJson(reader, InputData.class);
             for (int i=0;i<data.subscriptions.size();i++)
             {
-                if (i % 3 != currentId - 1)
-                    continue;
-
                 HashMap<String, SubscriptionData> sub = data.subscriptions.get(i);
                 ArrayList<FieldSubscription> subscription = new ArrayList<>();
                 for (String key : sub.keySet())
@@ -61,6 +66,7 @@ public class SubscriptionSpout extends BaseRichSpout {
         }
 
         System.out.println("----- Started subscription spout task: "+this.task);
+        System.out.println("----- Hash Ring initialized with " + hashRing.getNodeCount() + " brokers");
 
     }
 
@@ -78,14 +84,22 @@ public class SubscriptionSpout extends BaseRichSpout {
             builder.addFieldSubscriptions(field_builder.build());
         }
         SubscriptionOuterClass.Subscription sub = builder.build();
-        this.collector.emit("broker" + (i % 3 + 1), new Values((Object) sub.toByteArray()));
+        
+        // Use hash ring to determine target broker
+        String subscriptionKey = String.valueOf(i);
+        String targetBroker = hashRing.getNode(subscriptionKey);
+        
+        this.collector.emit(targetBroker, new Values((Object) sub.toByteArray()));
         i++;
     }
 
     public void declareOutputFields(OutputFieldsDeclarer declarer) {
+        // Declare streams for all possible brokers (can be made dynamic)
         declarer.declareStream("broker1", new Fields("subscription"));
         declarer.declareStream("broker2", new Fields("subscription"));
         declarer.declareStream("broker3", new Fields("subscription"));
+        // Add more brokers if needed:
+        // declarer.declareStream("broker4", new Fields("subscription"));
+        // declarer.declareStream("broker5", new Fields("subscription"));
     }
-
 }

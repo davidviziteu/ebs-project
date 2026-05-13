@@ -12,7 +12,7 @@ def get_random_float():
     return round(random.uniform(0, 1), 2)
 
 def get_random_city():
-    cities = ['vaslui', 'valea lupului']
+    cities = ['iasi', 'bucuresti']
     return random.choice(cities)
 
 def get_random_direction():

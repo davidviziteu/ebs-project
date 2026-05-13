@@ -44,21 +44,20 @@ public class Main {
             try {
                 Thread.sleep(180 * 1000);
             } catch (InterruptedException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
 
             cluster.killTopology("publish_subscribe_topology");
             cluster.shutdown();
-
             cluster.close();
+            
             Stats.latency /= Stats.publications_number;
             Stats.match_number /= Stats.publications_number;
             System.out.println("Number of publications: " + Stats.publications_number);
             System.out.println("Avg latency(milli): " + Stats.latency);
             System.out.println("Avg match rate: " + Stats.match_number);
         } catch(Exception ex) {
-
+            ex.printStackTrace();
         }
     }
 }
