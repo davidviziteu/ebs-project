@@ -2,7 +2,7 @@ import java.util.*;
 
 public class HashRing {
     
-    private final SortedMap<Long, String> ring = new TreeMap<>();
+    private final NavigableMap<Long, String> ring = new TreeMap<>();
     private final int virtualNodes;
     private static final int DEFAULT_VIRTUAL_NODES = 160; // 160 virtual nodes
     
@@ -36,7 +36,7 @@ public class HashRing {
         long hash = hash(subscriptionKey);
         
         // Find the first node with hash >= subscription hash
-        SortedMap<Long, String> tailMap = ring.tailMap(hash);
+        NavigableMap<Long, String> tailMap = ring.tailMap(hash, true);
         
         if (tailMap.isEmpty()) {
             // Wrap around to the first node in the ring

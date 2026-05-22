@@ -21,7 +21,7 @@ public class SubscriptionSpout extends BaseRichSpout {
     private int i = 0;
 
     private String jsonPath;
-    private HashRing hashRing;
+    private transient HashRing hashRing;
 
     private ArrayList<ArrayList<FieldSubscription>> subscriptionList = new ArrayList<>();
 
@@ -29,7 +29,7 @@ public class SubscriptionSpout extends BaseRichSpout {
     {
         super();
         jsonPath = path;
-        this.hashRing = new HashRing();
+        // NOTE: do not instantiate HashRing here — Storm serializes the spout
     }
 
     public void open(Map<String, Object> conf, TopologyContext context, SpoutOutputCollector collector) {
@@ -37,8 +37,8 @@ public class SubscriptionSpout extends BaseRichSpout {
         this.collector = collector;
         this.task = context.getThisComponentId();
 
-        // Initialize hash ring with available brokers
-        // Get number of broker tasks from topology context
+        // Initialize hash ring with available brokers (created here, after deserialization)
+        this.hashRing = new HashRing();
         int brokerCount = 3; // Default, can be made configurable
         for (int j = 1; j <= brokerCount; j++) {
             hashRing.addNode("broker" + j);
