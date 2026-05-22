@@ -47,7 +47,7 @@ public class HashRing {
     }
     
     private long hash(String key) {
-        long hash = 14695981039346656037L; // FNV offset basis
+        long hash = 0xcbf29ce484222325L; // FNV offset basis
         for (byte b : key.getBytes()) {
             hash ^= b;
             hash *= 1099511628211L; // FNV prime
