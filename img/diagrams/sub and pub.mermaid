@@ -1,0 +1,38 @@
+
+---
+config:
+  layout: dagre
+---
+flowchart LR
+ subgraph SUBS["Subscription side (partitioned via HashRing)"]
+        S1["SubscriptionSpout #1"]
+        S2["SubscriptionSpout #2"]
+        S3["SubscriptionSpout #3"]
+  end
+ subgraph PUB["Publication side (broadcast)"]
+        P["PublisherSpout"]
+  end
+ subgraph BROKERS["Brokers (store local subs, match incoming pubs)"]
+        B1["BrokerBolt 1"]
+        B2["BrokerBolt 2"]
+        B3["BrokerBolt 3"]
+  end
+ subgraph NOTIF["Notifiers (count + measure latency)"]
+        N1["NotifierBolt 1"]
+        N2["NotifierBolt 2"]
+        N3["NotifierBolt 3"]
+  end
+    JSON[("results.json")] --> P & S1 & S2 & S3
+    S1 -- hash(sub) → brokerX --> B1
+    S1 -. or .-> B2 & B3
+    S2 --> B2
+    S2 -. or .-> B1 & B3
+    S3 --> B3
+    S3 -. or .-> B1 & B2
+    P == allGrouping (broadcast) ==> B1 & B2 & B3
+    B1 -- matches --> N1
+    B1 -. shuffle .-> N2 & N3
+    B2 -- matches --> N2
+    B2 -. shuffle .-> N1 & N3
+    B3 -- matches --> N3
+    B3 -. shuffle .-> N1 & N2

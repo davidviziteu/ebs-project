@@ -1,0 +1,25 @@
+---
+config:
+  layout: dagre
+---
+flowchart LR
+    subgraph SUBS["Subscription side (partitioned via HashRing)"]
+        S1["SubscriptionSpout #1"]
+        S2["SubscriptionSpout #2"]
+        S3["SubscriptionSpout #3"]
+    end
+
+    subgraph BROKERS["Brokers (build local subscription index)"]
+        B1["BrokerBolt 1<br/>~N/3 subs"]
+        B2["BrokerBolt 2<br/>~N/3 subs"]
+        B3["BrokerBolt 3<br/>~N/3 subs"]
+    end
+
+    JSON[("results.json")] --> S1 & S2 & S3
+
+    S1 -- "hash(sub) → brokerX" --> B1
+    S1 -. or .-> B2 & B3
+    S2 --> B2
+    S2 -. or .-> B1 & B3
+    S3 --> B3
+    S3 -. or .-> B1 & B2

@@ -1,0 +1,26 @@
+sequenceDiagram
+    autonumber
+    participant P as PublisherSpout
+    participant B1 as BrokerBolt 1<br/>(~N/3 local subs)
+    participant B2 as BrokerBolt 2<br/>(~N/3 local subs)
+    participant B3 as BrokerBolt 3<br/>(~N/3 local subs)
+    participant N as NotifierBolts
+
+    Note over P: Reads one publication<br/>{stationid, city, temp, wind}
+    P->>B1: emit (allGrouping → copy 1)
+    P->>B2: emit (allGrouping → copy 2)
+    P->>B3: emit (allGrouping → copy 3)
+    
+    Note over B2: Hash ring simulation
+    par Broker 1 matches locally
+        B1->>B1: scan local subscriptions<br/>evaluate predicates
+        B1-->>N: 1 tuple per match
+    and Broker 2 matches locally
+        B2->>B2: scan local subscriptions
+        B2-->>N: 1 tuple per match
+    and Broker 3 matches locally
+        B3->>B3: scan local subscriptions
+        B3-->>N: 1 tuple per match
+    end
+
+    Note over N: Increment Stats.match_number<br/>Increment Stats.publications_number<br/>Accumulate latency

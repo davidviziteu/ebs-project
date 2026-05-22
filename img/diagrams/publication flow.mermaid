@@ -1,0 +1,31 @@
+---
+config:
+  layout: dagre
+---
+flowchart LR
+    subgraph PUB["Publication side (broadcast)"]
+        P["PublisherSpout"]
+    end
+
+    subgraph BROKERS["Brokers (match against local subs)"]
+        B1["BrokerBolt 1<br/>~N/3 subs"]
+        B2["BrokerBolt 2<br/>~N/3 subs"]
+        B3["BrokerBolt 3<br/>~N/3 subs"]
+    end
+
+    subgraph NOTIF["Notifiers (count + measure latency)"]
+        N1["NotifierBolt 1"]
+        N2["NotifierBolt 2"]
+        N3["NotifierBolt 3"]
+    end
+
+    JSON[("results.json")] --> P
+
+    P == "allGrouping (broadcast)" ==> B1 & B2 & B3
+
+    B1 -- matches --> N1
+    B1 -. shuffle .-> N2 & N3
+    B2 -- matches --> N2
+    B2 -. shuffle .-> N1 & N3
+    B3 -- matches --> N3
+    B3 -. shuffle .-> N1 & N2
