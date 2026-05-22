@@ -7,9 +7,13 @@
 
 ## Topology
 
-<p align="center">
-  <img src="img/topology.png" alt="">
-</p>
+### Notification Flow
+
+![Notification Flow](img/notification_life.png)
+
+![Publication Flow](img/publication_flow.png)
+
+![Subscription Flow](img/subscription_flow.png)
 
 ## Performance
 
@@ -32,8 +36,8 @@ Avg match rate: 679.04706
 ```
 
 
-```
 cli:
+```
 brew install --cask temurin@17     
 
 mvn -q clean compile
