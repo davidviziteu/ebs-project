@@ -11,7 +11,7 @@
             "type": "operator",
             "field": "temp",
             "operator": "=",
-            "percent": "=100"
+            "percent": "=25"
         }
     ],
     "threads": 1
