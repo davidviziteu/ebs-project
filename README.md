@@ -18,7 +18,7 @@
 ## Performance
 
 Tests were ran 5 times.
-
+WITHOUT HEARTHBEAT
 ### 100% '=' subscriptions
 
 ```
@@ -35,6 +35,7 @@ Avg latency(milli): 5377.8657
 Avg match rate: 679.04706
 ```
 
+WITH HEARTHBEAT
 
 cli:
 ```

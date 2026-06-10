@@ -1,6 +1,6 @@
 {
-    "publications": 10000,
-    "subscriptions": 10000,
+    "publications": 5000,
+    "subscriptions": 5000,
     "constraints": [
         {
             "type": "frequency",
