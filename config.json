@@ -1,6 +1,6 @@
 {
-    "publications": 10000,
-    "subscriptions": 10000,
+    "publications": 5000,
+    "subscriptions": 5000,
     "constraints": [
         {
             "type": "frequency",
@@ -11,7 +11,7 @@
             "type": "operator",
             "field": "temp",
             "operator": "=",
-            "percent": "=25"
+            "percent": "=100"
         }
     ],
     "threads": 1
