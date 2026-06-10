@@ -1,0 +1,37 @@
+sequenceDiagram
+    autonumber
+    participant P as PublisherSpout
+    participant B1 as BrokerBolt i<br/>(primary)
+    participant B2 as BrokerBolt (i mod 10)+1<br/>(backup / watcher)
+    participant FS as Shared state dir<br/>(/tmp/ebs-state/&lt;broker&gt;.json)
+
+    Note over B1,B2: Ring topology: backup(i) = broker((i mod 10) + 1)<br/>broker1→broker2, …, broker10→broker1<br/>HEARTBEAT_INTERVAL_MS = 1200 · HEARTBEAT_TIMEOUT_MS = 5000
+
+    rect rgb(235, 245, 255)
+        Note over B1: maybeEmitHeartbeat() runs while processing publications
+        loop every publication
+            P->>B1: publication tuple
+            B1->>B1: process & match subscriptions
+            alt now - lastHeartbeatSentMs >= 1200 ms
+                B1->>B1: lastHeartbeatSentMs = now<br/>seqNo = ++localSequence
+                B1-->>B2: heartbeat_stream<br/>Heartbeat{source=brokerI,<br/>target=backup, timestamp, seqNo}
+                Note over B1,B2: fieldsGrouping on target_broker<br/>routes to the backup task
+                B2->>B2: handleHeartbeat()<br/>lastHeartbeat[brokerI] = timestamp
+            else interval not elapsed
+                B1->>B1: skip emit (throttled)
+            end
+        end
+    end
+
+    Note over B2: checkFailover() runs at the end of every execute()
+
+    alt heartbeats keep arriving
+        B2->>B2: now - lastHeartbeat[brokerI] <= 5000 ms<br/>primary considered ALIVE → no action
+    else primary goes silent
+        Note over B1: broker i crashes / simulatedDown<br/>→ stops emitting heartbeats
+        B2->>B2: now - lastHeartbeat[brokerI] > 5000 ms<br/>and not already in failedPrimaries
+        B2->>B2: failedPrimaries.add(brokerI)<br/>"activated failover for brokerI"
+        B2->>FS: adoptPrimaryFromSnapshot(brokerI)<br/>loadSnapshotForBroker(brokerI)
+        FS-->>B2: deliveredIds, localSubscriptions,<br/>pendingDeliveries
+        B2->>B2: take over brokerI's subscriptions<br/>& replay pending deliveries
+    end
