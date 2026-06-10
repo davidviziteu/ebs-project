@@ -17,25 +17,67 @@ public final class SubscriptionOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+     * <code>string subId = 1;</code>
+     * @return The subId.
+     */
+    java.lang.String getSubId();
+    /**
+     * <code>string subId = 1;</code>
+     * @return The bytes for subId.
+     */
+    com.google.protobuf.ByteString
+        getSubIdBytes();
+
+    /**
+     * <code>string subscriberId = 2;</code>
+     * @return The subscriberId.
+     */
+    java.lang.String getSubscriberId();
+    /**
+     * <code>string subscriberId = 2;</code>
+     * @return The bytes for subscriberId.
+     */
+    com.google.protobuf.ByteString
+        getSubscriberIdBytes();
+
+    /**
+     * <code>string ownerBrokerId = 3;</code>
+     * @return The ownerBrokerId.
+     */
+    java.lang.String getOwnerBrokerId();
+    /**
+     * <code>string ownerBrokerId = 3;</code>
+     * @return The bytes for ownerBrokerId.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBrokerIdBytes();
+
+    /**
+     * <code>int64 createdAt = 4;</code>
+     * @return The createdAt.
+     */
+    long getCreatedAt();
+
+    /**
+     * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
      */
     java.util.List<SubscriptionOuterClass.Subscription.FieldSubscription> 
         getFieldSubscriptionsList();
     /**
-     * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+     * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
      */
     SubscriptionOuterClass.Subscription.FieldSubscription getFieldSubscriptions(int index);
     /**
-     * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+     * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
      */
     int getFieldSubscriptionsCount();
     /**
-     * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+     * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
      */
     java.util.List<? extends SubscriptionOuterClass.Subscription.FieldSubscriptionOrBuilder> 
         getFieldSubscriptionsOrBuilderList();
     /**
-     * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+     * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
      */
     SubscriptionOuterClass.Subscription.FieldSubscriptionOrBuilder getFieldSubscriptionsOrBuilder(
         int index);
@@ -53,6 +95,9 @@ public final class SubscriptionOuterClass {
       super(builder);
     }
     private Subscription() {
+      subId_ = "";
+      subscriberId_ = "";
+      ownerBrokerId_ = "";
       fieldSubscriptions_ = java.util.Collections.emptyList();
     }
 
@@ -924,18 +969,146 @@ public final class SubscriptionOuterClass {
 
     }
 
-    public static final int FIELDSUBSCRIPTIONS_FIELD_NUMBER = 1;
+    public static final int SUBID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subId_ = "";
+    /**
+     * <code>string subId = 1;</code>
+     * @return The subId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubId() {
+      java.lang.Object ref = subId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subId = 1;</code>
+     * @return The bytes for subId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubIdBytes() {
+      java.lang.Object ref = subId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBSCRIBERID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subscriberId_ = "";
+    /**
+     * <code>string subscriberId = 2;</code>
+     * @return The subscriberId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubscriberId() {
+      java.lang.Object ref = subscriberId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subscriberId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subscriberId = 2;</code>
+     * @return The bytes for subscriberId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubscriberIdBytes() {
+      java.lang.Object ref = subscriberId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subscriberId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNERBROKERID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ownerBrokerId_ = "";
+    /**
+     * <code>string ownerBrokerId = 3;</code>
+     * @return The ownerBrokerId.
+     */
+    @java.lang.Override
+    public java.lang.String getOwnerBrokerId() {
+      java.lang.Object ref = ownerBrokerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ownerBrokerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string ownerBrokerId = 3;</code>
+     * @return The bytes for ownerBrokerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBrokerIdBytes() {
+      java.lang.Object ref = ownerBrokerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ownerBrokerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATEDAT_FIELD_NUMBER = 4;
+    private long createdAt_ = 0L;
+    /**
+     * <code>int64 createdAt = 4;</code>
+     * @return The createdAt.
+     */
+    @java.lang.Override
+    public long getCreatedAt() {
+      return createdAt_;
+    }
+
+    public static final int FIELDSUBSCRIPTIONS_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
     private java.util.List<SubscriptionOuterClass.Subscription.FieldSubscription> fieldSubscriptions_;
     /**
-     * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+     * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
      */
     @java.lang.Override
     public java.util.List<SubscriptionOuterClass.Subscription.FieldSubscription> getFieldSubscriptionsList() {
       return fieldSubscriptions_;
     }
     /**
-     * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+     * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
      */
     @java.lang.Override
     public java.util.List<? extends SubscriptionOuterClass.Subscription.FieldSubscriptionOrBuilder> 
@@ -943,21 +1116,21 @@ public final class SubscriptionOuterClass {
       return fieldSubscriptions_;
     }
     /**
-     * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+     * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
      */
     @java.lang.Override
     public int getFieldSubscriptionsCount() {
       return fieldSubscriptions_.size();
     }
     /**
-     * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+     * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
      */
     @java.lang.Override
     public SubscriptionOuterClass.Subscription.FieldSubscription getFieldSubscriptions(int index) {
       return fieldSubscriptions_.get(index);
     }
     /**
-     * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+     * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
      */
     @java.lang.Override
     public SubscriptionOuterClass.Subscription.FieldSubscriptionOrBuilder getFieldSubscriptionsOrBuilder(
@@ -979,8 +1152,20 @@ public final class SubscriptionOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriberId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subscriberId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerBrokerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, ownerBrokerId_);
+      }
+      if (createdAt_ != 0L) {
+        output.writeInt64(4, createdAt_);
+      }
       for (int i = 0; i < fieldSubscriptions_.size(); i++) {
-        output.writeMessage(1, fieldSubscriptions_.get(i));
+        output.writeMessage(5, fieldSubscriptions_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -991,9 +1176,22 @@ public final class SubscriptionOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriberId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, subscriberId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerBrokerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, ownerBrokerId_);
+      }
+      if (createdAt_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, createdAt_);
+      }
       for (int i = 0; i < fieldSubscriptions_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, fieldSubscriptions_.get(i));
+          .computeMessageSize(5, fieldSubscriptions_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1010,6 +1208,14 @@ public final class SubscriptionOuterClass {
       }
       SubscriptionOuterClass.Subscription other = (SubscriptionOuterClass.Subscription) obj;
 
+      if (!getSubId()
+          .equals(other.getSubId())) return false;
+      if (!getSubscriberId()
+          .equals(other.getSubscriberId())) return false;
+      if (!getOwnerBrokerId()
+          .equals(other.getOwnerBrokerId())) return false;
+      if (getCreatedAt()
+          != other.getCreatedAt()) return false;
       if (!getFieldSubscriptionsList()
           .equals(other.getFieldSubscriptionsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -1023,6 +1229,15 @@ public final class SubscriptionOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubId().hashCode();
+      hash = (37 * hash) + SUBSCRIBERID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubscriberId().hashCode();
+      hash = (37 * hash) + OWNERBROKERID_FIELD_NUMBER;
+      hash = (53 * hash) + getOwnerBrokerId().hashCode();
+      hash = (37 * hash) + CREATEDAT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCreatedAt());
       if (getFieldSubscriptionsCount() > 0) {
         hash = (37 * hash) + FIELDSUBSCRIPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getFieldSubscriptionsList().hashCode();
@@ -1158,13 +1373,17 @@ public final class SubscriptionOuterClass {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
+        subId_ = "";
+        subscriberId_ = "";
+        ownerBrokerId_ = "";
+        createdAt_ = 0L;
         if (fieldSubscriptionsBuilder_ == null) {
           fieldSubscriptions_ = java.util.Collections.emptyList();
         } else {
           fieldSubscriptions_ = null;
           fieldSubscriptionsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -1199,9 +1418,9 @@ public final class SubscriptionOuterClass {
 
       private void buildPartialRepeatedFields(SubscriptionOuterClass.Subscription result) {
         if (fieldSubscriptionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             fieldSubscriptions_ = java.util.Collections.unmodifiableList(fieldSubscriptions_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.fieldSubscriptions_ = fieldSubscriptions_;
         } else {
@@ -1211,6 +1430,18 @@ public final class SubscriptionOuterClass {
 
       private void buildPartial0(SubscriptionOuterClass.Subscription result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.subId_ = subId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.subscriberId_ = subscriberId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.ownerBrokerId_ = ownerBrokerId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.createdAt_ = createdAt_;
+        }
       }
 
       @java.lang.Override
@@ -1257,11 +1488,29 @@ public final class SubscriptionOuterClass {
 
       public Builder mergeFrom(SubscriptionOuterClass.Subscription other) {
         if (other == SubscriptionOuterClass.Subscription.getDefaultInstance()) return this;
+        if (!other.getSubId().isEmpty()) {
+          subId_ = other.subId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getSubscriberId().isEmpty()) {
+          subscriberId_ = other.subscriberId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getOwnerBrokerId().isEmpty()) {
+          ownerBrokerId_ = other.ownerBrokerId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getCreatedAt() != 0L) {
+          setCreatedAt(other.getCreatedAt());
+        }
         if (fieldSubscriptionsBuilder_ == null) {
           if (!other.fieldSubscriptions_.isEmpty()) {
             if (fieldSubscriptions_.isEmpty()) {
               fieldSubscriptions_ = other.fieldSubscriptions_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureFieldSubscriptionsIsMutable();
               fieldSubscriptions_.addAll(other.fieldSubscriptions_);
@@ -1274,7 +1523,7 @@ public final class SubscriptionOuterClass {
               fieldSubscriptionsBuilder_.dispose();
               fieldSubscriptionsBuilder_ = null;
               fieldSubscriptions_ = other.fieldSubscriptions_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000010);
               fieldSubscriptionsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getFieldSubscriptionsFieldBuilder() : null;
@@ -1310,6 +1559,26 @@ public final class SubscriptionOuterClass {
                 done = true;
                 break;
               case 10: {
+                subId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                subscriberId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                ownerBrokerId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                createdAt_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
                 SubscriptionOuterClass.Subscription.FieldSubscription m =
                     input.readMessage(
                         SubscriptionOuterClass.Subscription.FieldSubscription.parser(),
@@ -1321,7 +1590,7 @@ public final class SubscriptionOuterClass {
                   fieldSubscriptionsBuilder_.addMessage(m);
                 }
                 break;
-              } // case 10
+              } // case 42
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1339,12 +1608,260 @@ public final class SubscriptionOuterClass {
       }
       private int bitField0_;
 
+      private java.lang.Object subId_ = "";
+      /**
+       * <code>string subId = 1;</code>
+       * @return The subId.
+       */
+      public java.lang.String getSubId() {
+        java.lang.Object ref = subId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subId = 1;</code>
+       * @return The bytes for subId.
+       */
+      public com.google.protobuf.ByteString
+          getSubIdBytes() {
+        java.lang.Object ref = subId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subId = 1;</code>
+       * @param value The subId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        subId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subId = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubId() {
+        subId_ = getDefaultInstance().getSubId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subId = 1;</code>
+       * @param value The bytes for subId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        subId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subscriberId_ = "";
+      /**
+       * <code>string subscriberId = 2;</code>
+       * @return The subscriberId.
+       */
+      public java.lang.String getSubscriberId() {
+        java.lang.Object ref = subscriberId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subscriberId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subscriberId = 2;</code>
+       * @return The bytes for subscriberId.
+       */
+      public com.google.protobuf.ByteString
+          getSubscriberIdBytes() {
+        java.lang.Object ref = subscriberId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subscriberId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subscriberId = 2;</code>
+       * @param value The subscriberId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriberId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        subscriberId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscriberId = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubscriberId() {
+        subscriberId_ = getDefaultInstance().getSubscriberId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscriberId = 2;</code>
+       * @param value The bytes for subscriberId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriberIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        subscriberId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ownerBrokerId_ = "";
+      /**
+       * <code>string ownerBrokerId = 3;</code>
+       * @return The ownerBrokerId.
+       */
+      public java.lang.String getOwnerBrokerId() {
+        java.lang.Object ref = ownerBrokerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ownerBrokerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ownerBrokerId = 3;</code>
+       * @return The bytes for ownerBrokerId.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBrokerIdBytes() {
+        java.lang.Object ref = ownerBrokerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ownerBrokerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ownerBrokerId = 3;</code>
+       * @param value The ownerBrokerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBrokerId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ownerBrokerId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ownerBrokerId = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwnerBrokerId() {
+        ownerBrokerId_ = getDefaultInstance().getOwnerBrokerId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ownerBrokerId = 3;</code>
+       * @param value The bytes for ownerBrokerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBrokerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ownerBrokerId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private long createdAt_ ;
+      /**
+       * <code>int64 createdAt = 4;</code>
+       * @return The createdAt.
+       */
+      @java.lang.Override
+      public long getCreatedAt() {
+        return createdAt_;
+      }
+      /**
+       * <code>int64 createdAt = 4;</code>
+       * @param value The createdAt to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatedAt(long value) {
+
+        createdAt_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 createdAt = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreatedAt() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        createdAt_ = 0L;
+        onChanged();
+        return this;
+      }
+
       private java.util.List<SubscriptionOuterClass.Subscription.FieldSubscription> fieldSubscriptions_ =
         java.util.Collections.emptyList();
       private void ensureFieldSubscriptionsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           fieldSubscriptions_ = new java.util.ArrayList<SubscriptionOuterClass.Subscription.FieldSubscription>(fieldSubscriptions_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -1352,7 +1869,7 @@ public final class SubscriptionOuterClass {
           SubscriptionOuterClass.Subscription.FieldSubscription, SubscriptionOuterClass.Subscription.FieldSubscription.Builder, SubscriptionOuterClass.Subscription.FieldSubscriptionOrBuilder> fieldSubscriptionsBuilder_;
 
       /**
-       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
        */
       public java.util.List<SubscriptionOuterClass.Subscription.FieldSubscription> getFieldSubscriptionsList() {
         if (fieldSubscriptionsBuilder_ == null) {
@@ -1362,7 +1879,7 @@ public final class SubscriptionOuterClass {
         }
       }
       /**
-       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
        */
       public int getFieldSubscriptionsCount() {
         if (fieldSubscriptionsBuilder_ == null) {
@@ -1372,7 +1889,7 @@ public final class SubscriptionOuterClass {
         }
       }
       /**
-       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
        */
       public SubscriptionOuterClass.Subscription.FieldSubscription getFieldSubscriptions(int index) {
         if (fieldSubscriptionsBuilder_ == null) {
@@ -1382,7 +1899,7 @@ public final class SubscriptionOuterClass {
         }
       }
       /**
-       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
        */
       public Builder setFieldSubscriptions(
           int index, SubscriptionOuterClass.Subscription.FieldSubscription value) {
@@ -1399,7 +1916,7 @@ public final class SubscriptionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
        */
       public Builder setFieldSubscriptions(
           int index, SubscriptionOuterClass.Subscription.FieldSubscription.Builder builderForValue) {
@@ -1413,7 +1930,7 @@ public final class SubscriptionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
        */
       public Builder addFieldSubscriptions(SubscriptionOuterClass.Subscription.FieldSubscription value) {
         if (fieldSubscriptionsBuilder_ == null) {
@@ -1429,7 +1946,7 @@ public final class SubscriptionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
        */
       public Builder addFieldSubscriptions(
           int index, SubscriptionOuterClass.Subscription.FieldSubscription value) {
@@ -1446,7 +1963,7 @@ public final class SubscriptionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
        */
       public Builder addFieldSubscriptions(
           SubscriptionOuterClass.Subscription.FieldSubscription.Builder builderForValue) {
@@ -1460,7 +1977,7 @@ public final class SubscriptionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
        */
       public Builder addFieldSubscriptions(
           int index, SubscriptionOuterClass.Subscription.FieldSubscription.Builder builderForValue) {
@@ -1474,7 +1991,7 @@ public final class SubscriptionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
        */
       public Builder addAllFieldSubscriptions(
           java.lang.Iterable<? extends SubscriptionOuterClass.Subscription.FieldSubscription> values) {
@@ -1489,12 +2006,12 @@ public final class SubscriptionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
        */
       public Builder clearFieldSubscriptions() {
         if (fieldSubscriptionsBuilder_ == null) {
           fieldSubscriptions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           fieldSubscriptionsBuilder_.clear();
@@ -1502,7 +2019,7 @@ public final class SubscriptionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
        */
       public Builder removeFieldSubscriptions(int index) {
         if (fieldSubscriptionsBuilder_ == null) {
@@ -1515,14 +2032,14 @@ public final class SubscriptionOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
        */
       public SubscriptionOuterClass.Subscription.FieldSubscription.Builder getFieldSubscriptionsBuilder(
           int index) {
         return getFieldSubscriptionsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
        */
       public SubscriptionOuterClass.Subscription.FieldSubscriptionOrBuilder getFieldSubscriptionsOrBuilder(
           int index) {
@@ -1532,7 +2049,7 @@ public final class SubscriptionOuterClass {
         }
       }
       /**
-       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
        */
       public java.util.List<? extends SubscriptionOuterClass.Subscription.FieldSubscriptionOrBuilder> 
            getFieldSubscriptionsOrBuilderList() {
@@ -1543,14 +2060,14 @@ public final class SubscriptionOuterClass {
         }
       }
       /**
-       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
        */
       public SubscriptionOuterClass.Subscription.FieldSubscription.Builder addFieldSubscriptionsBuilder() {
         return getFieldSubscriptionsFieldBuilder().addBuilder(
             SubscriptionOuterClass.Subscription.FieldSubscription.getDefaultInstance());
       }
       /**
-       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
        */
       public SubscriptionOuterClass.Subscription.FieldSubscription.Builder addFieldSubscriptionsBuilder(
           int index) {
@@ -1558,7 +2075,7 @@ public final class SubscriptionOuterClass {
             index, SubscriptionOuterClass.Subscription.FieldSubscription.getDefaultInstance());
       }
       /**
-       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 1;</code>
+       * <code>repeated .Subscription.FieldSubscription fieldSubscriptions = 5;</code>
        */
       public java.util.List<SubscriptionOuterClass.Subscription.FieldSubscription.Builder> 
            getFieldSubscriptionsBuilderList() {
@@ -1571,7 +2088,7 @@ public final class SubscriptionOuterClass {
           fieldSubscriptionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               SubscriptionOuterClass.Subscription.FieldSubscription, SubscriptionOuterClass.Subscription.FieldSubscription.Builder, SubscriptionOuterClass.Subscription.FieldSubscriptionOrBuilder>(
                   fieldSubscriptions_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           fieldSubscriptions_ = null;
@@ -1661,11 +2178,13 @@ public final class SubscriptionOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022Subscription.proto\"\216\001\n\014Subscription\022;\n" +
-      "\022fieldSubscriptions\030\001 \003(\0132\037.Subscription" +
-      ".FieldSubscription\032A\n\021FieldSubscription\022" +
-      "\013\n\003key\030\001 \001(\t\022\020\n\010operator\030\002 \001(\t\022\r\n\005value\030" +
-      "\003 \001(\tb\006proto3"
+      "\n\022Subscription.proto\"\335\001\n\014Subscription\022\r\n" +
+      "\005subId\030\001 \001(\t\022\024\n\014subscriberId\030\002 \001(\t\022\025\n\row" +
+      "nerBrokerId\030\003 \001(\t\022\021\n\tcreatedAt\030\004 \001(\003\022;\n\022" +
+      "fieldSubscriptions\030\005 \003(\0132\037.Subscription." +
+      "FieldSubscription\032A\n\021FieldSubscription\022\013" +
+      "\n\003key\030\001 \001(\t\022\020\n\010operator\030\002 \001(\t\022\r\n\005value\030\003" +
+      " \001(\tb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1676,7 +2195,7 @@ public final class SubscriptionOuterClass {
     internal_static_Subscription_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Subscription_descriptor,
-        new java.lang.String[] { "FieldSubscriptions", });
+        new java.lang.String[] { "SubId", "SubscriberId", "OwnerBrokerId", "CreatedAt", "FieldSubscriptions", });
     internal_static_Subscription_FieldSubscription_descriptor =
       internal_static_Subscription_descriptor.getNestedTypes().get(0);
     internal_static_Subscription_FieldSubscription_fieldAccessorTable = new

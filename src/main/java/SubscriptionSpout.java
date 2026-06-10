@@ -3,6 +3,7 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.time.Instant;
 
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
@@ -24,6 +25,7 @@ public class SubscriptionSpout extends BaseRichSpout {
     private transient HashRing hashRing;
 
     private ArrayList<ArrayList<FieldSubscription>> subscriptionList = new ArrayList<>();
+    private long subSequence = 0L;
 
     SubscriptionSpout(String path)
     {
@@ -75,6 +77,14 @@ public class SubscriptionSpout extends BaseRichSpout {
             return;
 
         SubscriptionOuterClass.Subscription.Builder builder = SubscriptionOuterClass.Subscription.newBuilder();
+
+        // Use hash ring to determine target broker
+        String subscriptionKey = this.task + "-" + (subSequence++);
+        String targetBroker = hashRing.getNode(subscriptionKey);
+        builder.setSubId(subscriptionKey);
+        builder.setSubscriberId(this.task);
+        builder.setOwnerBrokerId(targetBroker);
+        builder.setCreatedAt(Instant.now().toEpochMilli());
         for (FieldSubscription field_sub : subscriptionList.get(i))
         {
             SubscriptionOuterClass.Subscription.FieldSubscription.Builder field_builder = SubscriptionOuterClass.Subscription.FieldSubscription.newBuilder();
@@ -84,11 +94,7 @@ public class SubscriptionSpout extends BaseRichSpout {
             builder.addFieldSubscriptions(field_builder.build());
         }
         SubscriptionOuterClass.Subscription sub = builder.build();
-        
-        // Use hash ring to determine target broker
-        String subscriptionKey = String.valueOf(i);
-        String targetBroker = hashRing.getNode(subscriptionKey);
-        
+
         this.collector.emit(targetBroker, new Values((Object) sub.toByteArray()));
         i++;
     }

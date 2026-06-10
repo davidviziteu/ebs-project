@@ -17,8 +17,10 @@ import org.apache.storm.tuple.Values;
 public class PublisherSpout extends BaseRichSpout {
     private static final long serialVersionUID = 1;
     private SpoutOutputCollector collector;
-    private final List<Object> valueList = new ArrayList<>();
+    private final List<PublicationOuterClass.Publication> valueList = new ArrayList<>();
     private int i = 0;
+    private long publicationSeq = 0L;
+    private boolean endOfStreamEmitted = false;
 
     private String jsonPath;
 
@@ -44,7 +46,7 @@ public class PublisherSpout extends BaseRichSpout {
                 builder.setTemp(pub.temp);
                 builder.setWind(pub.wind);
                 PublicationOuterClass.Publication publication = builder.build();
-                this.valueList.add(publication.toByteArray());
+                this.valueList.add(publication);
             }
 
         } catch (FileNotFoundException e)
@@ -57,17 +59,23 @@ public class PublisherSpout extends BaseRichSpout {
     }
 
     public void nextTuple() {
-        if(this.i == this.valueList.size())
-        {
-            i = 0;
-//            return;
+        if (this.i >= this.valueList.size()) {
+            if (!endOfStreamEmitted) {
+                endOfStreamEmitted = true;
+                this.collector.emit(new Values(-1L, new byte[0], true));
+            }
+            return;
         }
+        PublicationOuterClass.Publication basePublication = this.valueList.get(i++);
+        PublicationOuterClass.Publication publication = PublicationOuterClass.Publication.newBuilder(basePublication)
+                .setPubId(String.valueOf(publicationSeq++))
+                .build();
         long timestamp = Instant.now().toEpochMilli();
-        this.collector.emit(new Values(timestamp, this.valueList.get(i++)));
+        this.collector.emit(new Values(timestamp, publication.toByteArray(), false));
     }
 
     public void declareOutputFields(OutputFieldsDeclarer declarer) {
-        declarer.declare(new Fields("timestamp", "publication_data"));
+        declarer.declare(new Fields("timestamp", "publication_data", "end_of_stream"));
     }
 
 }

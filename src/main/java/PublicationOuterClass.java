@@ -17,48 +17,60 @@ public final class PublicationOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string stationid = 1;</code>
+     * <code>string pubId = 1;</code>
+     * @return The pubId.
+     */
+    java.lang.String getPubId();
+    /**
+     * <code>string pubId = 1;</code>
+     * @return The bytes for pubId.
+     */
+    com.google.protobuf.ByteString
+        getPubIdBytes();
+
+    /**
+     * <code>string stationid = 2;</code>
      * @return The stationid.
      */
     java.lang.String getStationid();
     /**
-     * <code>string stationid = 1;</code>
+     * <code>string stationid = 2;</code>
      * @return The bytes for stationid.
      */
     com.google.protobuf.ByteString
         getStationidBytes();
 
     /**
-     * <code>string city = 2;</code>
+     * <code>string city = 3;</code>
      * @return The city.
      */
     java.lang.String getCity();
     /**
-     * <code>string city = 2;</code>
+     * <code>string city = 3;</code>
      * @return The bytes for city.
      */
     com.google.protobuf.ByteString
         getCityBytes();
 
     /**
-     * <code>string temp = 3;</code>
+     * <code>string temp = 4;</code>
      * @return The temp.
      */
     java.lang.String getTemp();
     /**
-     * <code>string temp = 3;</code>
+     * <code>string temp = 4;</code>
      * @return The bytes for temp.
      */
     com.google.protobuf.ByteString
         getTempBytes();
 
     /**
-     * <code>string wind = 4;</code>
+     * <code>string wind = 5;</code>
      * @return The wind.
      */
     java.lang.String getWind();
     /**
-     * <code>string wind = 4;</code>
+     * <code>string wind = 5;</code>
      * @return The bytes for wind.
      */
     com.google.protobuf.ByteString
@@ -77,6 +89,7 @@ public final class PublicationOuterClass {
       super(builder);
     }
     private Publication() {
+      pubId_ = "";
       stationid_ = "";
       city_ = "";
       temp_ = "";
@@ -103,11 +116,50 @@ public final class PublicationOuterClass {
               PublicationOuterClass.Publication.class, PublicationOuterClass.Publication.Builder.class);
     }
 
-    public static final int STATIONID_FIELD_NUMBER = 1;
+    public static final int PUBID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object pubId_ = "";
+    /**
+     * <code>string pubId = 1;</code>
+     * @return The pubId.
+     */
+    @java.lang.Override
+    public java.lang.String getPubId() {
+      java.lang.Object ref = pubId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pubId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string pubId = 1;</code>
+     * @return The bytes for pubId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPubIdBytes() {
+      java.lang.Object ref = pubId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pubId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATIONID_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object stationid_ = "";
     /**
-     * <code>string stationid = 1;</code>
+     * <code>string stationid = 2;</code>
      * @return The stationid.
      */
     @java.lang.Override
@@ -124,7 +176,7 @@ public final class PublicationOuterClass {
       }
     }
     /**
-     * <code>string stationid = 1;</code>
+     * <code>string stationid = 2;</code>
      * @return The bytes for stationid.
      */
     @java.lang.Override
@@ -142,11 +194,11 @@ public final class PublicationOuterClass {
       }
     }
 
-    public static final int CITY_FIELD_NUMBER = 2;
+    public static final int CITY_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
     private volatile java.lang.Object city_ = "";
     /**
-     * <code>string city = 2;</code>
+     * <code>string city = 3;</code>
      * @return The city.
      */
     @java.lang.Override
@@ -163,7 +215,7 @@ public final class PublicationOuterClass {
       }
     }
     /**
-     * <code>string city = 2;</code>
+     * <code>string city = 3;</code>
      * @return The bytes for city.
      */
     @java.lang.Override
@@ -181,11 +233,11 @@ public final class PublicationOuterClass {
       }
     }
 
-    public static final int TEMP_FIELD_NUMBER = 3;
+    public static final int TEMP_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
     private volatile java.lang.Object temp_ = "";
     /**
-     * <code>string temp = 3;</code>
+     * <code>string temp = 4;</code>
      * @return The temp.
      */
     @java.lang.Override
@@ -202,7 +254,7 @@ public final class PublicationOuterClass {
       }
     }
     /**
-     * <code>string temp = 3;</code>
+     * <code>string temp = 4;</code>
      * @return The bytes for temp.
      */
     @java.lang.Override
@@ -220,11 +272,11 @@ public final class PublicationOuterClass {
       }
     }
 
-    public static final int WIND_FIELD_NUMBER = 4;
+    public static final int WIND_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
     private volatile java.lang.Object wind_ = "";
     /**
-     * <code>string wind = 4;</code>
+     * <code>string wind = 5;</code>
      * @return The wind.
      */
     @java.lang.Override
@@ -241,7 +293,7 @@ public final class PublicationOuterClass {
       }
     }
     /**
-     * <code>string wind = 4;</code>
+     * <code>string wind = 5;</code>
      * @return The bytes for wind.
      */
     @java.lang.Override
@@ -273,17 +325,20 @@ public final class PublicationOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pubId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pubId_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stationid_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, stationid_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, stationid_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(city_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, city_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, city_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(temp_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, temp_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, temp_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(wind_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, wind_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, wind_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -294,17 +349,20 @@ public final class PublicationOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pubId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pubId_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stationid_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, stationid_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, stationid_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(city_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, city_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, city_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(temp_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, temp_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, temp_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(wind_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, wind_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, wind_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -321,6 +379,8 @@ public final class PublicationOuterClass {
       }
       PublicationOuterClass.Publication other = (PublicationOuterClass.Publication) obj;
 
+      if (!getPubId()
+          .equals(other.getPubId())) return false;
       if (!getStationid()
           .equals(other.getStationid())) return false;
       if (!getCity()
@@ -340,6 +400,8 @@ public final class PublicationOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PUBID_FIELD_NUMBER;
+      hash = (53 * hash) + getPubId().hashCode();
       hash = (37 * hash) + STATIONID_FIELD_NUMBER;
       hash = (53 * hash) + getStationid().hashCode();
       hash = (37 * hash) + CITY_FIELD_NUMBER;
@@ -479,6 +541,7 @@ public final class PublicationOuterClass {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
+        pubId_ = "";
         stationid_ = "";
         city_ = "";
         temp_ = "";
@@ -517,15 +580,18 @@ public final class PublicationOuterClass {
       private void buildPartial0(PublicationOuterClass.Publication result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.stationid_ = stationid_;
+          result.pubId_ = pubId_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.city_ = city_;
+          result.stationid_ = stationid_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.temp_ = temp_;
+          result.city_ = city_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.temp_ = temp_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.wind_ = wind_;
         }
       }
@@ -574,24 +640,29 @@ public final class PublicationOuterClass {
 
       public Builder mergeFrom(PublicationOuterClass.Publication other) {
         if (other == PublicationOuterClass.Publication.getDefaultInstance()) return this;
+        if (!other.getPubId().isEmpty()) {
+          pubId_ = other.pubId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         if (!other.getStationid().isEmpty()) {
           stationid_ = other.stationid_;
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getCity().isEmpty()) {
           city_ = other.city_;
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getTemp().isEmpty()) {
           temp_ = other.temp_;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (!other.getWind().isEmpty()) {
           wind_ = other.wind_;
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -621,25 +692,30 @@ public final class PublicationOuterClass {
                 done = true;
                 break;
               case 10: {
-                stationid_ = input.readStringRequireUtf8();
+                pubId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
-                city_ = input.readStringRequireUtf8();
+                stationid_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
-                temp_ = input.readStringRequireUtf8();
+                city_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
-                wind_ = input.readStringRequireUtf8();
+                temp_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
+              case 42: {
+                wind_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -657,9 +733,81 @@ public final class PublicationOuterClass {
       }
       private int bitField0_;
 
+      private java.lang.Object pubId_ = "";
+      /**
+       * <code>string pubId = 1;</code>
+       * @return The pubId.
+       */
+      public java.lang.String getPubId() {
+        java.lang.Object ref = pubId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pubId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string pubId = 1;</code>
+       * @return The bytes for pubId.
+       */
+      public com.google.protobuf.ByteString
+          getPubIdBytes() {
+        java.lang.Object ref = pubId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pubId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string pubId = 1;</code>
+       * @param value The pubId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPubId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        pubId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pubId = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPubId() {
+        pubId_ = getDefaultInstance().getPubId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pubId = 1;</code>
+       * @param value The bytes for pubId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPubIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        pubId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object stationid_ = "";
       /**
-       * <code>string stationid = 1;</code>
+       * <code>string stationid = 2;</code>
        * @return The stationid.
        */
       public java.lang.String getStationid() {
@@ -675,7 +823,7 @@ public final class PublicationOuterClass {
         }
       }
       /**
-       * <code>string stationid = 1;</code>
+       * <code>string stationid = 2;</code>
        * @return The bytes for stationid.
        */
       public com.google.protobuf.ByteString
@@ -692,7 +840,7 @@ public final class PublicationOuterClass {
         }
       }
       /**
-       * <code>string stationid = 1;</code>
+       * <code>string stationid = 2;</code>
        * @param value The stationid to set.
        * @return This builder for chaining.
        */
@@ -700,22 +848,22 @@ public final class PublicationOuterClass {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         stationid_ = value;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>string stationid = 1;</code>
+       * <code>string stationid = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearStationid() {
         stationid_ = getDefaultInstance().getStationid();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
-       * <code>string stationid = 1;</code>
+       * <code>string stationid = 2;</code>
        * @param value The bytes for stationid to set.
        * @return This builder for chaining.
        */
@@ -724,14 +872,14 @@ public final class PublicationOuterClass {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         stationid_ = value;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
 
       private java.lang.Object city_ = "";
       /**
-       * <code>string city = 2;</code>
+       * <code>string city = 3;</code>
        * @return The city.
        */
       public java.lang.String getCity() {
@@ -747,7 +895,7 @@ public final class PublicationOuterClass {
         }
       }
       /**
-       * <code>string city = 2;</code>
+       * <code>string city = 3;</code>
        * @return The bytes for city.
        */
       public com.google.protobuf.ByteString
@@ -764,7 +912,7 @@ public final class PublicationOuterClass {
         }
       }
       /**
-       * <code>string city = 2;</code>
+       * <code>string city = 3;</code>
        * @param value The city to set.
        * @return This builder for chaining.
        */
@@ -772,22 +920,22 @@ public final class PublicationOuterClass {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         city_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>string city = 2;</code>
+       * <code>string city = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearCity() {
         city_ = getDefaultInstance().getCity();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
-       * <code>string city = 2;</code>
+       * <code>string city = 3;</code>
        * @param value The bytes for city to set.
        * @return This builder for chaining.
        */
@@ -796,14 +944,14 @@ public final class PublicationOuterClass {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         city_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
 
       private java.lang.Object temp_ = "";
       /**
-       * <code>string temp = 3;</code>
+       * <code>string temp = 4;</code>
        * @return The temp.
        */
       public java.lang.String getTemp() {
@@ -819,7 +967,7 @@ public final class PublicationOuterClass {
         }
       }
       /**
-       * <code>string temp = 3;</code>
+       * <code>string temp = 4;</code>
        * @return The bytes for temp.
        */
       public com.google.protobuf.ByteString
@@ -836,7 +984,7 @@ public final class PublicationOuterClass {
         }
       }
       /**
-       * <code>string temp = 3;</code>
+       * <code>string temp = 4;</code>
        * @param value The temp to set.
        * @return This builder for chaining.
        */
@@ -844,22 +992,22 @@ public final class PublicationOuterClass {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         temp_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>string temp = 3;</code>
+       * <code>string temp = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearTemp() {
         temp_ = getDefaultInstance().getTemp();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
       /**
-       * <code>string temp = 3;</code>
+       * <code>string temp = 4;</code>
        * @param value The bytes for temp to set.
        * @return This builder for chaining.
        */
@@ -868,14 +1016,14 @@ public final class PublicationOuterClass {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         temp_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
 
       private java.lang.Object wind_ = "";
       /**
-       * <code>string wind = 4;</code>
+       * <code>string wind = 5;</code>
        * @return The wind.
        */
       public java.lang.String getWind() {
@@ -891,7 +1039,7 @@ public final class PublicationOuterClass {
         }
       }
       /**
-       * <code>string wind = 4;</code>
+       * <code>string wind = 5;</code>
        * @return The bytes for wind.
        */
       public com.google.protobuf.ByteString
@@ -908,7 +1056,7 @@ public final class PublicationOuterClass {
         }
       }
       /**
-       * <code>string wind = 4;</code>
+       * <code>string wind = 5;</code>
        * @param value The wind to set.
        * @return This builder for chaining.
        */
@@ -916,22 +1064,22 @@ public final class PublicationOuterClass {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         wind_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>string wind = 4;</code>
+       * <code>string wind = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearWind() {
         wind_ = getDefaultInstance().getWind();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
       /**
-       * <code>string wind = 4;</code>
+       * <code>string wind = 5;</code>
        * @param value The bytes for wind to set.
        * @return This builder for chaining.
        */
@@ -940,7 +1088,7 @@ public final class PublicationOuterClass {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         wind_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1008,11 +1156,4322 @@ public final class PublicationOuterClass {
 
   }
 
+  public interface DeliveryEnvelopeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:DeliveryEnvelope)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string deliveryId = 1;</code>
+     * @return The deliveryId.
+     */
+    java.lang.String getDeliveryId();
+    /**
+     * <code>string deliveryId = 1;</code>
+     * @return The bytes for deliveryId.
+     */
+    com.google.protobuf.ByteString
+        getDeliveryIdBytes();
+
+    /**
+     * <code>string pubId = 2;</code>
+     * @return The pubId.
+     */
+    java.lang.String getPubId();
+    /**
+     * <code>string pubId = 2;</code>
+     * @return The bytes for pubId.
+     */
+    com.google.protobuf.ByteString
+        getPubIdBytes();
+
+    /**
+     * <code>string subId = 3;</code>
+     * @return The subId.
+     */
+    java.lang.String getSubId();
+    /**
+     * <code>string subId = 3;</code>
+     * @return The bytes for subId.
+     */
+    com.google.protobuf.ByteString
+        getSubIdBytes();
+
+    /**
+     * <code>string ownerBrokerId = 4;</code>
+     * @return The ownerBrokerId.
+     */
+    java.lang.String getOwnerBrokerId();
+    /**
+     * <code>string ownerBrokerId = 4;</code>
+     * @return The bytes for ownerBrokerId.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBrokerIdBytes();
+
+    /**
+     * <code>string targetNotifierId = 5;</code>
+     * @return The targetNotifierId.
+     */
+    java.lang.String getTargetNotifierId();
+    /**
+     * <code>string targetNotifierId = 5;</code>
+     * @return The bytes for targetNotifierId.
+     */
+    com.google.protobuf.ByteString
+        getTargetNotifierIdBytes();
+
+    /**
+     * <code>int64 seqNo = 6;</code>
+     * @return The seqNo.
+     */
+    long getSeqNo();
+
+    /**
+     * <code>bytes publicationData = 7;</code>
+     * @return The publicationData.
+     */
+    com.google.protobuf.ByteString getPublicationData();
+  }
+  /**
+   * Protobuf type {@code DeliveryEnvelope}
+   */
+  public static final class DeliveryEnvelope extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:DeliveryEnvelope)
+      DeliveryEnvelopeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeliveryEnvelope.newBuilder() to construct.
+    private DeliveryEnvelope(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeliveryEnvelope() {
+      deliveryId_ = "";
+      pubId_ = "";
+      subId_ = "";
+      ownerBrokerId_ = "";
+      targetNotifierId_ = "";
+      publicationData_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeliveryEnvelope();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return PublicationOuterClass.internal_static_DeliveryEnvelope_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return PublicationOuterClass.internal_static_DeliveryEnvelope_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              PublicationOuterClass.DeliveryEnvelope.class, PublicationOuterClass.DeliveryEnvelope.Builder.class);
+    }
+
+    public static final int DELIVERYID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object deliveryId_ = "";
+    /**
+     * <code>string deliveryId = 1;</code>
+     * @return The deliveryId.
+     */
+    @java.lang.Override
+    public java.lang.String getDeliveryId() {
+      java.lang.Object ref = deliveryId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deliveryId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string deliveryId = 1;</code>
+     * @return The bytes for deliveryId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeliveryIdBytes() {
+      java.lang.Object ref = deliveryId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deliveryId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PUBID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object pubId_ = "";
+    /**
+     * <code>string pubId = 2;</code>
+     * @return The pubId.
+     */
+    @java.lang.Override
+    public java.lang.String getPubId() {
+      java.lang.Object ref = pubId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pubId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string pubId = 2;</code>
+     * @return The bytes for pubId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPubIdBytes() {
+      java.lang.Object ref = pubId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pubId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subId_ = "";
+    /**
+     * <code>string subId = 3;</code>
+     * @return The subId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubId() {
+      java.lang.Object ref = subId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subId = 3;</code>
+     * @return The bytes for subId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubIdBytes() {
+      java.lang.Object ref = subId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNERBROKERID_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ownerBrokerId_ = "";
+    /**
+     * <code>string ownerBrokerId = 4;</code>
+     * @return The ownerBrokerId.
+     */
+    @java.lang.Override
+    public java.lang.String getOwnerBrokerId() {
+      java.lang.Object ref = ownerBrokerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ownerBrokerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string ownerBrokerId = 4;</code>
+     * @return The bytes for ownerBrokerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBrokerIdBytes() {
+      java.lang.Object ref = ownerBrokerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ownerBrokerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TARGETNOTIFIERID_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object targetNotifierId_ = "";
+    /**
+     * <code>string targetNotifierId = 5;</code>
+     * @return The targetNotifierId.
+     */
+    @java.lang.Override
+    public java.lang.String getTargetNotifierId() {
+      java.lang.Object ref = targetNotifierId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        targetNotifierId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string targetNotifierId = 5;</code>
+     * @return The bytes for targetNotifierId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTargetNotifierIdBytes() {
+      java.lang.Object ref = targetNotifierId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        targetNotifierId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SEQNO_FIELD_NUMBER = 6;
+    private long seqNo_ = 0L;
+    /**
+     * <code>int64 seqNo = 6;</code>
+     * @return The seqNo.
+     */
+    @java.lang.Override
+    public long getSeqNo() {
+      return seqNo_;
+    }
+
+    public static final int PUBLICATIONDATA_FIELD_NUMBER = 7;
+    private com.google.protobuf.ByteString publicationData_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes publicationData = 7;</code>
+     * @return The publicationData.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPublicationData() {
+      return publicationData_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deliveryId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, deliveryId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pubId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, pubId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, subId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerBrokerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, ownerBrokerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetNotifierId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, targetNotifierId_);
+      }
+      if (seqNo_ != 0L) {
+        output.writeInt64(6, seqNo_);
+      }
+      if (!publicationData_.isEmpty()) {
+        output.writeBytes(7, publicationData_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deliveryId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, deliveryId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pubId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, pubId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, subId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerBrokerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, ownerBrokerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetNotifierId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, targetNotifierId_);
+      }
+      if (seqNo_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, seqNo_);
+      }
+      if (!publicationData_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, publicationData_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof PublicationOuterClass.DeliveryEnvelope)) {
+        return super.equals(obj);
+      }
+      PublicationOuterClass.DeliveryEnvelope other = (PublicationOuterClass.DeliveryEnvelope) obj;
+
+      if (!getDeliveryId()
+          .equals(other.getDeliveryId())) return false;
+      if (!getPubId()
+          .equals(other.getPubId())) return false;
+      if (!getSubId()
+          .equals(other.getSubId())) return false;
+      if (!getOwnerBrokerId()
+          .equals(other.getOwnerBrokerId())) return false;
+      if (!getTargetNotifierId()
+          .equals(other.getTargetNotifierId())) return false;
+      if (getSeqNo()
+          != other.getSeqNo()) return false;
+      if (!getPublicationData()
+          .equals(other.getPublicationData())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DELIVERYID_FIELD_NUMBER;
+      hash = (53 * hash) + getDeliveryId().hashCode();
+      hash = (37 * hash) + PUBID_FIELD_NUMBER;
+      hash = (53 * hash) + getPubId().hashCode();
+      hash = (37 * hash) + SUBID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubId().hashCode();
+      hash = (37 * hash) + OWNERBROKERID_FIELD_NUMBER;
+      hash = (53 * hash) + getOwnerBrokerId().hashCode();
+      hash = (37 * hash) + TARGETNOTIFIERID_FIELD_NUMBER;
+      hash = (53 * hash) + getTargetNotifierId().hashCode();
+      hash = (37 * hash) + SEQNO_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSeqNo());
+      hash = (37 * hash) + PUBLICATIONDATA_FIELD_NUMBER;
+      hash = (53 * hash) + getPublicationData().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static PublicationOuterClass.DeliveryEnvelope parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static PublicationOuterClass.DeliveryEnvelope parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static PublicationOuterClass.DeliveryEnvelope parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static PublicationOuterClass.DeliveryEnvelope parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static PublicationOuterClass.DeliveryEnvelope parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static PublicationOuterClass.DeliveryEnvelope parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static PublicationOuterClass.DeliveryEnvelope parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static PublicationOuterClass.DeliveryEnvelope parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static PublicationOuterClass.DeliveryEnvelope parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static PublicationOuterClass.DeliveryEnvelope parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static PublicationOuterClass.DeliveryEnvelope parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static PublicationOuterClass.DeliveryEnvelope parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(PublicationOuterClass.DeliveryEnvelope prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code DeliveryEnvelope}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:DeliveryEnvelope)
+        PublicationOuterClass.DeliveryEnvelopeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return PublicationOuterClass.internal_static_DeliveryEnvelope_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return PublicationOuterClass.internal_static_DeliveryEnvelope_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                PublicationOuterClass.DeliveryEnvelope.class, PublicationOuterClass.DeliveryEnvelope.Builder.class);
+      }
+
+      // Construct using PublicationOuterClass.DeliveryEnvelope.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        deliveryId_ = "";
+        pubId_ = "";
+        subId_ = "";
+        ownerBrokerId_ = "";
+        targetNotifierId_ = "";
+        seqNo_ = 0L;
+        publicationData_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return PublicationOuterClass.internal_static_DeliveryEnvelope_descriptor;
+      }
+
+      @java.lang.Override
+      public PublicationOuterClass.DeliveryEnvelope getDefaultInstanceForType() {
+        return PublicationOuterClass.DeliveryEnvelope.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public PublicationOuterClass.DeliveryEnvelope build() {
+        PublicationOuterClass.DeliveryEnvelope result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public PublicationOuterClass.DeliveryEnvelope buildPartial() {
+        PublicationOuterClass.DeliveryEnvelope result = new PublicationOuterClass.DeliveryEnvelope(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(PublicationOuterClass.DeliveryEnvelope result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.deliveryId_ = deliveryId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pubId_ = pubId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.subId_ = subId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.ownerBrokerId_ = ownerBrokerId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.targetNotifierId_ = targetNotifierId_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.seqNo_ = seqNo_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.publicationData_ = publicationData_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof PublicationOuterClass.DeliveryEnvelope) {
+          return mergeFrom((PublicationOuterClass.DeliveryEnvelope)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(PublicationOuterClass.DeliveryEnvelope other) {
+        if (other == PublicationOuterClass.DeliveryEnvelope.getDefaultInstance()) return this;
+        if (!other.getDeliveryId().isEmpty()) {
+          deliveryId_ = other.deliveryId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getPubId().isEmpty()) {
+          pubId_ = other.pubId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSubId().isEmpty()) {
+          subId_ = other.subId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getOwnerBrokerId().isEmpty()) {
+          ownerBrokerId_ = other.ownerBrokerId_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getTargetNotifierId().isEmpty()) {
+          targetNotifierId_ = other.targetNotifierId_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.getSeqNo() != 0L) {
+          setSeqNo(other.getSeqNo());
+        }
+        if (other.getPublicationData() != com.google.protobuf.ByteString.EMPTY) {
+          setPublicationData(other.getPublicationData());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                deliveryId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                pubId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                subId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                ownerBrokerId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                targetNotifierId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 48: {
+                seqNo_ = input.readInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 58: {
+                publicationData_ = input.readBytes();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object deliveryId_ = "";
+      /**
+       * <code>string deliveryId = 1;</code>
+       * @return The deliveryId.
+       */
+      public java.lang.String getDeliveryId() {
+        java.lang.Object ref = deliveryId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          deliveryId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string deliveryId = 1;</code>
+       * @return The bytes for deliveryId.
+       */
+      public com.google.protobuf.ByteString
+          getDeliveryIdBytes() {
+        java.lang.Object ref = deliveryId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          deliveryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string deliveryId = 1;</code>
+       * @param value The deliveryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeliveryId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        deliveryId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string deliveryId = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeliveryId() {
+        deliveryId_ = getDefaultInstance().getDeliveryId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string deliveryId = 1;</code>
+       * @param value The bytes for deliveryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeliveryIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        deliveryId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pubId_ = "";
+      /**
+       * <code>string pubId = 2;</code>
+       * @return The pubId.
+       */
+      public java.lang.String getPubId() {
+        java.lang.Object ref = pubId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pubId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string pubId = 2;</code>
+       * @return The bytes for pubId.
+       */
+      public com.google.protobuf.ByteString
+          getPubIdBytes() {
+        java.lang.Object ref = pubId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pubId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string pubId = 2;</code>
+       * @param value The pubId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPubId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        pubId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pubId = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPubId() {
+        pubId_ = getDefaultInstance().getPubId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pubId = 2;</code>
+       * @param value The bytes for pubId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPubIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        pubId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subId_ = "";
+      /**
+       * <code>string subId = 3;</code>
+       * @return The subId.
+       */
+      public java.lang.String getSubId() {
+        java.lang.Object ref = subId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subId = 3;</code>
+       * @return The bytes for subId.
+       */
+      public com.google.protobuf.ByteString
+          getSubIdBytes() {
+        java.lang.Object ref = subId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subId = 3;</code>
+       * @param value The subId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        subId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subId = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubId() {
+        subId_ = getDefaultInstance().getSubId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subId = 3;</code>
+       * @param value The bytes for subId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        subId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ownerBrokerId_ = "";
+      /**
+       * <code>string ownerBrokerId = 4;</code>
+       * @return The ownerBrokerId.
+       */
+      public java.lang.String getOwnerBrokerId() {
+        java.lang.Object ref = ownerBrokerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ownerBrokerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ownerBrokerId = 4;</code>
+       * @return The bytes for ownerBrokerId.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBrokerIdBytes() {
+        java.lang.Object ref = ownerBrokerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ownerBrokerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ownerBrokerId = 4;</code>
+       * @param value The ownerBrokerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBrokerId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ownerBrokerId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ownerBrokerId = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwnerBrokerId() {
+        ownerBrokerId_ = getDefaultInstance().getOwnerBrokerId();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ownerBrokerId = 4;</code>
+       * @param value The bytes for ownerBrokerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBrokerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ownerBrokerId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object targetNotifierId_ = "";
+      /**
+       * <code>string targetNotifierId = 5;</code>
+       * @return The targetNotifierId.
+       */
+      public java.lang.String getTargetNotifierId() {
+        java.lang.Object ref = targetNotifierId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          targetNotifierId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string targetNotifierId = 5;</code>
+       * @return The bytes for targetNotifierId.
+       */
+      public com.google.protobuf.ByteString
+          getTargetNotifierIdBytes() {
+        java.lang.Object ref = targetNotifierId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          targetNotifierId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string targetNotifierId = 5;</code>
+       * @param value The targetNotifierId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargetNotifierId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        targetNotifierId_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string targetNotifierId = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTargetNotifierId() {
+        targetNotifierId_ = getDefaultInstance().getTargetNotifierId();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string targetNotifierId = 5;</code>
+       * @param value The bytes for targetNotifierId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargetNotifierIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        targetNotifierId_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private long seqNo_ ;
+      /**
+       * <code>int64 seqNo = 6;</code>
+       * @return The seqNo.
+       */
+      @java.lang.Override
+      public long getSeqNo() {
+        return seqNo_;
+      }
+      /**
+       * <code>int64 seqNo = 6;</code>
+       * @param value The seqNo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSeqNo(long value) {
+
+        seqNo_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 seqNo = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSeqNo() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        seqNo_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString publicationData_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes publicationData = 7;</code>
+       * @return The publicationData.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPublicationData() {
+        return publicationData_;
+      }
+      /**
+       * <code>bytes publicationData = 7;</code>
+       * @param value The publicationData to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicationData(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        publicationData_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes publicationData = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublicationData() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        publicationData_ = getDefaultInstance().getPublicationData();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:DeliveryEnvelope)
+    }
+
+    // @@protoc_insertion_point(class_scope:DeliveryEnvelope)
+    private static final PublicationOuterClass.DeliveryEnvelope DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new PublicationOuterClass.DeliveryEnvelope();
+    }
+
+    public static PublicationOuterClass.DeliveryEnvelope getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeliveryEnvelope>
+        PARSER = new com.google.protobuf.AbstractParser<DeliveryEnvelope>() {
+      @java.lang.Override
+      public DeliveryEnvelope parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeliveryEnvelope> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeliveryEnvelope> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public PublicationOuterClass.DeliveryEnvelope getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeliveryAckOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:DeliveryAck)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string deliveryId = 1;</code>
+     * @return The deliveryId.
+     */
+    java.lang.String getDeliveryId();
+    /**
+     * <code>string deliveryId = 1;</code>
+     * @return The bytes for deliveryId.
+     */
+    com.google.protobuf.ByteString
+        getDeliveryIdBytes();
+
+    /**
+     * <code>string ownerBrokerId = 2;</code>
+     * @return The ownerBrokerId.
+     */
+    java.lang.String getOwnerBrokerId();
+    /**
+     * <code>string ownerBrokerId = 2;</code>
+     * @return The bytes for ownerBrokerId.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBrokerIdBytes();
+
+    /**
+     * <code>string notifierId = 3;</code>
+     * @return The notifierId.
+     */
+    java.lang.String getNotifierId();
+    /**
+     * <code>string notifierId = 3;</code>
+     * @return The bytes for notifierId.
+     */
+    com.google.protobuf.ByteString
+        getNotifierIdBytes();
+
+    /**
+     * <code>int64 ackTimestamp = 4;</code>
+     * @return The ackTimestamp.
+     */
+    long getAckTimestamp();
+  }
+  /**
+   * Protobuf type {@code DeliveryAck}
+   */
+  public static final class DeliveryAck extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:DeliveryAck)
+      DeliveryAckOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeliveryAck.newBuilder() to construct.
+    private DeliveryAck(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeliveryAck() {
+      deliveryId_ = "";
+      ownerBrokerId_ = "";
+      notifierId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeliveryAck();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return PublicationOuterClass.internal_static_DeliveryAck_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return PublicationOuterClass.internal_static_DeliveryAck_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              PublicationOuterClass.DeliveryAck.class, PublicationOuterClass.DeliveryAck.Builder.class);
+    }
+
+    public static final int DELIVERYID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object deliveryId_ = "";
+    /**
+     * <code>string deliveryId = 1;</code>
+     * @return The deliveryId.
+     */
+    @java.lang.Override
+    public java.lang.String getDeliveryId() {
+      java.lang.Object ref = deliveryId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deliveryId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string deliveryId = 1;</code>
+     * @return The bytes for deliveryId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeliveryIdBytes() {
+      java.lang.Object ref = deliveryId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deliveryId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNERBROKERID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ownerBrokerId_ = "";
+    /**
+     * <code>string ownerBrokerId = 2;</code>
+     * @return The ownerBrokerId.
+     */
+    @java.lang.Override
+    public java.lang.String getOwnerBrokerId() {
+      java.lang.Object ref = ownerBrokerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ownerBrokerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string ownerBrokerId = 2;</code>
+     * @return The bytes for ownerBrokerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBrokerIdBytes() {
+      java.lang.Object ref = ownerBrokerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ownerBrokerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NOTIFIERID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object notifierId_ = "";
+    /**
+     * <code>string notifierId = 3;</code>
+     * @return The notifierId.
+     */
+    @java.lang.Override
+    public java.lang.String getNotifierId() {
+      java.lang.Object ref = notifierId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        notifierId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string notifierId = 3;</code>
+     * @return The bytes for notifierId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNotifierIdBytes() {
+      java.lang.Object ref = notifierId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        notifierId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACKTIMESTAMP_FIELD_NUMBER = 4;
+    private long ackTimestamp_ = 0L;
+    /**
+     * <code>int64 ackTimestamp = 4;</code>
+     * @return The ackTimestamp.
+     */
+    @java.lang.Override
+    public long getAckTimestamp() {
+      return ackTimestamp_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deliveryId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, deliveryId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerBrokerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, ownerBrokerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(notifierId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, notifierId_);
+      }
+      if (ackTimestamp_ != 0L) {
+        output.writeInt64(4, ackTimestamp_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deliveryId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, deliveryId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerBrokerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, ownerBrokerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(notifierId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, notifierId_);
+      }
+      if (ackTimestamp_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, ackTimestamp_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof PublicationOuterClass.DeliveryAck)) {
+        return super.equals(obj);
+      }
+      PublicationOuterClass.DeliveryAck other = (PublicationOuterClass.DeliveryAck) obj;
+
+      if (!getDeliveryId()
+          .equals(other.getDeliveryId())) return false;
+      if (!getOwnerBrokerId()
+          .equals(other.getOwnerBrokerId())) return false;
+      if (!getNotifierId()
+          .equals(other.getNotifierId())) return false;
+      if (getAckTimestamp()
+          != other.getAckTimestamp()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DELIVERYID_FIELD_NUMBER;
+      hash = (53 * hash) + getDeliveryId().hashCode();
+      hash = (37 * hash) + OWNERBROKERID_FIELD_NUMBER;
+      hash = (53 * hash) + getOwnerBrokerId().hashCode();
+      hash = (37 * hash) + NOTIFIERID_FIELD_NUMBER;
+      hash = (53 * hash) + getNotifierId().hashCode();
+      hash = (37 * hash) + ACKTIMESTAMP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAckTimestamp());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static PublicationOuterClass.DeliveryAck parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static PublicationOuterClass.DeliveryAck parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static PublicationOuterClass.DeliveryAck parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static PublicationOuterClass.DeliveryAck parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static PublicationOuterClass.DeliveryAck parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static PublicationOuterClass.DeliveryAck parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static PublicationOuterClass.DeliveryAck parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static PublicationOuterClass.DeliveryAck parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static PublicationOuterClass.DeliveryAck parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static PublicationOuterClass.DeliveryAck parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static PublicationOuterClass.DeliveryAck parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static PublicationOuterClass.DeliveryAck parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(PublicationOuterClass.DeliveryAck prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code DeliveryAck}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:DeliveryAck)
+        PublicationOuterClass.DeliveryAckOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return PublicationOuterClass.internal_static_DeliveryAck_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return PublicationOuterClass.internal_static_DeliveryAck_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                PublicationOuterClass.DeliveryAck.class, PublicationOuterClass.DeliveryAck.Builder.class);
+      }
+
+      // Construct using PublicationOuterClass.DeliveryAck.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        deliveryId_ = "";
+        ownerBrokerId_ = "";
+        notifierId_ = "";
+        ackTimestamp_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return PublicationOuterClass.internal_static_DeliveryAck_descriptor;
+      }
+
+      @java.lang.Override
+      public PublicationOuterClass.DeliveryAck getDefaultInstanceForType() {
+        return PublicationOuterClass.DeliveryAck.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public PublicationOuterClass.DeliveryAck build() {
+        PublicationOuterClass.DeliveryAck result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public PublicationOuterClass.DeliveryAck buildPartial() {
+        PublicationOuterClass.DeliveryAck result = new PublicationOuterClass.DeliveryAck(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(PublicationOuterClass.DeliveryAck result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.deliveryId_ = deliveryId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.ownerBrokerId_ = ownerBrokerId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.notifierId_ = notifierId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.ackTimestamp_ = ackTimestamp_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof PublicationOuterClass.DeliveryAck) {
+          return mergeFrom((PublicationOuterClass.DeliveryAck)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(PublicationOuterClass.DeliveryAck other) {
+        if (other == PublicationOuterClass.DeliveryAck.getDefaultInstance()) return this;
+        if (!other.getDeliveryId().isEmpty()) {
+          deliveryId_ = other.deliveryId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getOwnerBrokerId().isEmpty()) {
+          ownerBrokerId_ = other.ownerBrokerId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getNotifierId().isEmpty()) {
+          notifierId_ = other.notifierId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getAckTimestamp() != 0L) {
+          setAckTimestamp(other.getAckTimestamp());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                deliveryId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                ownerBrokerId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                notifierId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                ackTimestamp_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object deliveryId_ = "";
+      /**
+       * <code>string deliveryId = 1;</code>
+       * @return The deliveryId.
+       */
+      public java.lang.String getDeliveryId() {
+        java.lang.Object ref = deliveryId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          deliveryId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string deliveryId = 1;</code>
+       * @return The bytes for deliveryId.
+       */
+      public com.google.protobuf.ByteString
+          getDeliveryIdBytes() {
+        java.lang.Object ref = deliveryId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          deliveryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string deliveryId = 1;</code>
+       * @param value The deliveryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeliveryId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        deliveryId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string deliveryId = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeliveryId() {
+        deliveryId_ = getDefaultInstance().getDeliveryId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string deliveryId = 1;</code>
+       * @param value The bytes for deliveryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeliveryIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        deliveryId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ownerBrokerId_ = "";
+      /**
+       * <code>string ownerBrokerId = 2;</code>
+       * @return The ownerBrokerId.
+       */
+      public java.lang.String getOwnerBrokerId() {
+        java.lang.Object ref = ownerBrokerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ownerBrokerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ownerBrokerId = 2;</code>
+       * @return The bytes for ownerBrokerId.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBrokerIdBytes() {
+        java.lang.Object ref = ownerBrokerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ownerBrokerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ownerBrokerId = 2;</code>
+       * @param value The ownerBrokerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBrokerId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ownerBrokerId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ownerBrokerId = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwnerBrokerId() {
+        ownerBrokerId_ = getDefaultInstance().getOwnerBrokerId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ownerBrokerId = 2;</code>
+       * @param value The bytes for ownerBrokerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBrokerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ownerBrokerId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object notifierId_ = "";
+      /**
+       * <code>string notifierId = 3;</code>
+       * @return The notifierId.
+       */
+      public java.lang.String getNotifierId() {
+        java.lang.Object ref = notifierId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          notifierId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string notifierId = 3;</code>
+       * @return The bytes for notifierId.
+       */
+      public com.google.protobuf.ByteString
+          getNotifierIdBytes() {
+        java.lang.Object ref = notifierId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          notifierId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string notifierId = 3;</code>
+       * @param value The notifierId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNotifierId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        notifierId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string notifierId = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNotifierId() {
+        notifierId_ = getDefaultInstance().getNotifierId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string notifierId = 3;</code>
+       * @param value The bytes for notifierId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNotifierIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        notifierId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private long ackTimestamp_ ;
+      /**
+       * <code>int64 ackTimestamp = 4;</code>
+       * @return The ackTimestamp.
+       */
+      @java.lang.Override
+      public long getAckTimestamp() {
+        return ackTimestamp_;
+      }
+      /**
+       * <code>int64 ackTimestamp = 4;</code>
+       * @param value The ackTimestamp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAckTimestamp(long value) {
+
+        ackTimestamp_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 ackTimestamp = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAckTimestamp() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        ackTimestamp_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:DeliveryAck)
+    }
+
+    // @@protoc_insertion_point(class_scope:DeliveryAck)
+    private static final PublicationOuterClass.DeliveryAck DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new PublicationOuterClass.DeliveryAck();
+    }
+
+    public static PublicationOuterClass.DeliveryAck getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeliveryAck>
+        PARSER = new com.google.protobuf.AbstractParser<DeliveryAck>() {
+      @java.lang.Override
+      public DeliveryAck parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeliveryAck> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeliveryAck> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public PublicationOuterClass.DeliveryAck getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BrokerReplicationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:BrokerReplication)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.BrokerReplication.ReplicationType type = 1;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <code>.BrokerReplication.ReplicationType type = 1;</code>
+     * @return The type.
+     */
+    PublicationOuterClass.BrokerReplication.ReplicationType getType();
+
+    /**
+     * <code>string sourceBrokerId = 2;</code>
+     * @return The sourceBrokerId.
+     */
+    java.lang.String getSourceBrokerId();
+    /**
+     * <code>string sourceBrokerId = 2;</code>
+     * @return The bytes for sourceBrokerId.
+     */
+    com.google.protobuf.ByteString
+        getSourceBrokerIdBytes();
+
+    /**
+     * <code>string targetBrokerId = 3;</code>
+     * @return The targetBrokerId.
+     */
+    java.lang.String getTargetBrokerId();
+    /**
+     * <code>string targetBrokerId = 3;</code>
+     * @return The bytes for targetBrokerId.
+     */
+    com.google.protobuf.ByteString
+        getTargetBrokerIdBytes();
+
+    /**
+     * <code>int64 timestamp = 4;</code>
+     * @return The timestamp.
+     */
+    long getTimestamp();
+
+    /**
+     * <code>string key = 5;</code>
+     * @return The key.
+     */
+    java.lang.String getKey();
+    /**
+     * <code>string key = 5;</code>
+     * @return The bytes for key.
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+
+    /**
+     * <code>bytes payload = 6;</code>
+     * @return The payload.
+     */
+    com.google.protobuf.ByteString getPayload();
+  }
+  /**
+   * Protobuf type {@code BrokerReplication}
+   */
+  public static final class BrokerReplication extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:BrokerReplication)
+      BrokerReplicationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BrokerReplication.newBuilder() to construct.
+    private BrokerReplication(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BrokerReplication() {
+      type_ = 0;
+      sourceBrokerId_ = "";
+      targetBrokerId_ = "";
+      key_ = "";
+      payload_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BrokerReplication();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return PublicationOuterClass.internal_static_BrokerReplication_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return PublicationOuterClass.internal_static_BrokerReplication_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              PublicationOuterClass.BrokerReplication.class, PublicationOuterClass.BrokerReplication.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code BrokerReplication.ReplicationType}
+     */
+    public enum ReplicationType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>SUBSCRIPTION = 0;</code>
+       */
+      SUBSCRIPTION(0),
+      /**
+       * <code>PENDING_DELIVERY = 1;</code>
+       */
+      PENDING_DELIVERY(1),
+      /**
+       * <code>DELIVERY_ACK = 2;</code>
+       */
+      DELIVERY_ACK(2),
+      /**
+       * <code>CHECKPOINT = 3;</code>
+       */
+      CHECKPOINT(3),
+      /**
+       * <code>HEARTBEAT = 4;</code>
+       */
+      HEARTBEAT(4),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>SUBSCRIPTION = 0;</code>
+       */
+      public static final int SUBSCRIPTION_VALUE = 0;
+      /**
+       * <code>PENDING_DELIVERY = 1;</code>
+       */
+      public static final int PENDING_DELIVERY_VALUE = 1;
+      /**
+       * <code>DELIVERY_ACK = 2;</code>
+       */
+      public static final int DELIVERY_ACK_VALUE = 2;
+      /**
+       * <code>CHECKPOINT = 3;</code>
+       */
+      public static final int CHECKPOINT_VALUE = 3;
+      /**
+       * <code>HEARTBEAT = 4;</code>
+       */
+      public static final int HEARTBEAT_VALUE = 4;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ReplicationType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static ReplicationType forNumber(int value) {
+        switch (value) {
+          case 0: return SUBSCRIPTION;
+          case 1: return PENDING_DELIVERY;
+          case 2: return DELIVERY_ACK;
+          case 3: return CHECKPOINT;
+          case 4: return HEARTBEAT;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ReplicationType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ReplicationType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ReplicationType>() {
+              public ReplicationType findValueByNumber(int number) {
+                return ReplicationType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return PublicationOuterClass.BrokerReplication.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final ReplicationType[] VALUES = values();
+
+      public static ReplicationType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private ReplicationType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:BrokerReplication.ReplicationType)
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private int type_ = 0;
+    /**
+     * <code>.BrokerReplication.ReplicationType type = 1;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <code>.BrokerReplication.ReplicationType type = 1;</code>
+     * @return The type.
+     */
+    @java.lang.Override public PublicationOuterClass.BrokerReplication.ReplicationType getType() {
+      PublicationOuterClass.BrokerReplication.ReplicationType result = PublicationOuterClass.BrokerReplication.ReplicationType.forNumber(type_);
+      return result == null ? PublicationOuterClass.BrokerReplication.ReplicationType.UNRECOGNIZED : result;
+    }
+
+    public static final int SOURCEBROKERID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sourceBrokerId_ = "";
+    /**
+     * <code>string sourceBrokerId = 2;</code>
+     * @return The sourceBrokerId.
+     */
+    @java.lang.Override
+    public java.lang.String getSourceBrokerId() {
+      java.lang.Object ref = sourceBrokerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sourceBrokerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sourceBrokerId = 2;</code>
+     * @return The bytes for sourceBrokerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSourceBrokerIdBytes() {
+      java.lang.Object ref = sourceBrokerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sourceBrokerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TARGETBROKERID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object targetBrokerId_ = "";
+    /**
+     * <code>string targetBrokerId = 3;</code>
+     * @return The targetBrokerId.
+     */
+    @java.lang.Override
+    public java.lang.String getTargetBrokerId() {
+      java.lang.Object ref = targetBrokerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        targetBrokerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string targetBrokerId = 3;</code>
+     * @return The bytes for targetBrokerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTargetBrokerIdBytes() {
+      java.lang.Object ref = targetBrokerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        targetBrokerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TIMESTAMP_FIELD_NUMBER = 4;
+    private long timestamp_ = 0L;
+    /**
+     * <code>int64 timestamp = 4;</code>
+     * @return The timestamp.
+     */
+    @java.lang.Override
+    public long getTimestamp() {
+      return timestamp_;
+    }
+
+    public static final int KEY_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object key_ = "";
+    /**
+     * <code>string key = 5;</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        key_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string key = 5;</code>
+     * @return The bytes for key.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        key_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAYLOAD_FIELD_NUMBER = 6;
+    private com.google.protobuf.ByteString payload_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes payload = 6;</code>
+     * @return The payload.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPayload() {
+      return payload_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (type_ != PublicationOuterClass.BrokerReplication.ReplicationType.SUBSCRIPTION.getNumber()) {
+        output.writeEnum(1, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceBrokerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, sourceBrokerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetBrokerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, targetBrokerId_);
+      }
+      if (timestamp_ != 0L) {
+        output.writeInt64(4, timestamp_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, key_);
+      }
+      if (!payload_.isEmpty()) {
+        output.writeBytes(6, payload_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (type_ != PublicationOuterClass.BrokerReplication.ReplicationType.SUBSCRIPTION.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceBrokerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, sourceBrokerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetBrokerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, targetBrokerId_);
+      }
+      if (timestamp_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, timestamp_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, key_);
+      }
+      if (!payload_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, payload_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof PublicationOuterClass.BrokerReplication)) {
+        return super.equals(obj);
+      }
+      PublicationOuterClass.BrokerReplication other = (PublicationOuterClass.BrokerReplication) obj;
+
+      if (type_ != other.type_) return false;
+      if (!getSourceBrokerId()
+          .equals(other.getSourceBrokerId())) return false;
+      if (!getTargetBrokerId()
+          .equals(other.getTargetBrokerId())) return false;
+      if (getTimestamp()
+          != other.getTimestamp()) return false;
+      if (!getKey()
+          .equals(other.getKey())) return false;
+      if (!getPayload()
+          .equals(other.getPayload())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
+      hash = (37 * hash) + SOURCEBROKERID_FIELD_NUMBER;
+      hash = (53 * hash) + getSourceBrokerId().hashCode();
+      hash = (37 * hash) + TARGETBROKERID_FIELD_NUMBER;
+      hash = (53 * hash) + getTargetBrokerId().hashCode();
+      hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTimestamp());
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
+      hash = (53 * hash) + getPayload().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static PublicationOuterClass.BrokerReplication parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static PublicationOuterClass.BrokerReplication parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static PublicationOuterClass.BrokerReplication parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static PublicationOuterClass.BrokerReplication parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static PublicationOuterClass.BrokerReplication parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static PublicationOuterClass.BrokerReplication parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static PublicationOuterClass.BrokerReplication parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static PublicationOuterClass.BrokerReplication parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static PublicationOuterClass.BrokerReplication parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static PublicationOuterClass.BrokerReplication parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static PublicationOuterClass.BrokerReplication parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static PublicationOuterClass.BrokerReplication parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(PublicationOuterClass.BrokerReplication prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code BrokerReplication}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:BrokerReplication)
+        PublicationOuterClass.BrokerReplicationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return PublicationOuterClass.internal_static_BrokerReplication_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return PublicationOuterClass.internal_static_BrokerReplication_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                PublicationOuterClass.BrokerReplication.class, PublicationOuterClass.BrokerReplication.Builder.class);
+      }
+
+      // Construct using PublicationOuterClass.BrokerReplication.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        type_ = 0;
+        sourceBrokerId_ = "";
+        targetBrokerId_ = "";
+        timestamp_ = 0L;
+        key_ = "";
+        payload_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return PublicationOuterClass.internal_static_BrokerReplication_descriptor;
+      }
+
+      @java.lang.Override
+      public PublicationOuterClass.BrokerReplication getDefaultInstanceForType() {
+        return PublicationOuterClass.BrokerReplication.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public PublicationOuterClass.BrokerReplication build() {
+        PublicationOuterClass.BrokerReplication result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public PublicationOuterClass.BrokerReplication buildPartial() {
+        PublicationOuterClass.BrokerReplication result = new PublicationOuterClass.BrokerReplication(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(PublicationOuterClass.BrokerReplication result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sourceBrokerId_ = sourceBrokerId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.targetBrokerId_ = targetBrokerId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.timestamp_ = timestamp_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.key_ = key_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.payload_ = payload_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof PublicationOuterClass.BrokerReplication) {
+          return mergeFrom((PublicationOuterClass.BrokerReplication)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(PublicationOuterClass.BrokerReplication other) {
+        if (other == PublicationOuterClass.BrokerReplication.getDefaultInstance()) return this;
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
+        }
+        if (!other.getSourceBrokerId().isEmpty()) {
+          sourceBrokerId_ = other.sourceBrokerId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getTargetBrokerId().isEmpty()) {
+          targetBrokerId_ = other.targetBrokerId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getTimestamp() != 0L) {
+          setTimestamp(other.getTimestamp());
+        }
+        if (!other.getKey().isEmpty()) {
+          key_ = other.key_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.getPayload() != com.google.protobuf.ByteString.EMPTY) {
+          setPayload(other.getPayload());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                type_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                sourceBrokerId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                targetBrokerId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                timestamp_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                key_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                payload_ = input.readBytes();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int type_ = 0;
+      /**
+       * <code>.BrokerReplication.ReplicationType type = 1;</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <code>.BrokerReplication.ReplicationType type = 1;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        type_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.BrokerReplication.ReplicationType type = 1;</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public PublicationOuterClass.BrokerReplication.ReplicationType getType() {
+        PublicationOuterClass.BrokerReplication.ReplicationType result = PublicationOuterClass.BrokerReplication.ReplicationType.forNumber(type_);
+        return result == null ? PublicationOuterClass.BrokerReplication.ReplicationType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.BrokerReplication.ReplicationType type = 1;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(PublicationOuterClass.BrokerReplication.ReplicationType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.BrokerReplication.ReplicationType type = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sourceBrokerId_ = "";
+      /**
+       * <code>string sourceBrokerId = 2;</code>
+       * @return The sourceBrokerId.
+       */
+      public java.lang.String getSourceBrokerId() {
+        java.lang.Object ref = sourceBrokerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sourceBrokerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sourceBrokerId = 2;</code>
+       * @return The bytes for sourceBrokerId.
+       */
+      public com.google.protobuf.ByteString
+          getSourceBrokerIdBytes() {
+        java.lang.Object ref = sourceBrokerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sourceBrokerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sourceBrokerId = 2;</code>
+       * @param value The sourceBrokerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceBrokerId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sourceBrokerId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sourceBrokerId = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSourceBrokerId() {
+        sourceBrokerId_ = getDefaultInstance().getSourceBrokerId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sourceBrokerId = 2;</code>
+       * @param value The bytes for sourceBrokerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceBrokerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sourceBrokerId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object targetBrokerId_ = "";
+      /**
+       * <code>string targetBrokerId = 3;</code>
+       * @return The targetBrokerId.
+       */
+      public java.lang.String getTargetBrokerId() {
+        java.lang.Object ref = targetBrokerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          targetBrokerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string targetBrokerId = 3;</code>
+       * @return The bytes for targetBrokerId.
+       */
+      public com.google.protobuf.ByteString
+          getTargetBrokerIdBytes() {
+        java.lang.Object ref = targetBrokerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          targetBrokerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string targetBrokerId = 3;</code>
+       * @param value The targetBrokerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargetBrokerId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        targetBrokerId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string targetBrokerId = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTargetBrokerId() {
+        targetBrokerId_ = getDefaultInstance().getTargetBrokerId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string targetBrokerId = 3;</code>
+       * @param value The bytes for targetBrokerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargetBrokerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        targetBrokerId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private long timestamp_ ;
+      /**
+       * <code>int64 timestamp = 4;</code>
+       * @return The timestamp.
+       */
+      @java.lang.Override
+      public long getTimestamp() {
+        return timestamp_;
+      }
+      /**
+       * <code>int64 timestamp = 4;</code>
+       * @param value The timestamp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimestamp(long value) {
+
+        timestamp_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 timestamp = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimestamp() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        timestamp_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object key_ = "";
+      /**
+       * <code>string key = 5;</code>
+       * @return The key.
+       */
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          key_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string key = 5;</code>
+       * @return The bytes for key.
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string key = 5;</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        key_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        key_ = getDefaultInstance().getKey();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 5;</code>
+       * @param value The bytes for key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        key_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString payload_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes payload = 6;</code>
+       * @return The payload.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPayload() {
+        return payload_;
+      }
+      /**
+       * <code>bytes payload = 6;</code>
+       * @param value The payload to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayload(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        payload_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes payload = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPayload() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        payload_ = getDefaultInstance().getPayload();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:BrokerReplication)
+    }
+
+    // @@protoc_insertion_point(class_scope:BrokerReplication)
+    private static final PublicationOuterClass.BrokerReplication DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new PublicationOuterClass.BrokerReplication();
+    }
+
+    public static PublicationOuterClass.BrokerReplication getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BrokerReplication>
+        PARSER = new com.google.protobuf.AbstractParser<BrokerReplication>() {
+      @java.lang.Override
+      public BrokerReplication parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<BrokerReplication> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BrokerReplication> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public PublicationOuterClass.BrokerReplication getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface HeartbeatOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Heartbeat)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string sourceBrokerId = 1;</code>
+     * @return The sourceBrokerId.
+     */
+    java.lang.String getSourceBrokerId();
+    /**
+     * <code>string sourceBrokerId = 1;</code>
+     * @return The bytes for sourceBrokerId.
+     */
+    com.google.protobuf.ByteString
+        getSourceBrokerIdBytes();
+
+    /**
+     * <code>string targetBrokerId = 2;</code>
+     * @return The targetBrokerId.
+     */
+    java.lang.String getTargetBrokerId();
+    /**
+     * <code>string targetBrokerId = 2;</code>
+     * @return The bytes for targetBrokerId.
+     */
+    com.google.protobuf.ByteString
+        getTargetBrokerIdBytes();
+
+    /**
+     * <code>int64 timestamp = 3;</code>
+     * @return The timestamp.
+     */
+    long getTimestamp();
+
+    /**
+     * <code>int64 seqNo = 4;</code>
+     * @return The seqNo.
+     */
+    long getSeqNo();
+  }
+  /**
+   * Protobuf type {@code Heartbeat}
+   */
+  public static final class Heartbeat extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:Heartbeat)
+      HeartbeatOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Heartbeat.newBuilder() to construct.
+    private Heartbeat(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Heartbeat() {
+      sourceBrokerId_ = "";
+      targetBrokerId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Heartbeat();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return PublicationOuterClass.internal_static_Heartbeat_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return PublicationOuterClass.internal_static_Heartbeat_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              PublicationOuterClass.Heartbeat.class, PublicationOuterClass.Heartbeat.Builder.class);
+    }
+
+    public static final int SOURCEBROKERID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sourceBrokerId_ = "";
+    /**
+     * <code>string sourceBrokerId = 1;</code>
+     * @return The sourceBrokerId.
+     */
+    @java.lang.Override
+    public java.lang.String getSourceBrokerId() {
+      java.lang.Object ref = sourceBrokerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sourceBrokerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sourceBrokerId = 1;</code>
+     * @return The bytes for sourceBrokerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSourceBrokerIdBytes() {
+      java.lang.Object ref = sourceBrokerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sourceBrokerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TARGETBROKERID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object targetBrokerId_ = "";
+    /**
+     * <code>string targetBrokerId = 2;</code>
+     * @return The targetBrokerId.
+     */
+    @java.lang.Override
+    public java.lang.String getTargetBrokerId() {
+      java.lang.Object ref = targetBrokerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        targetBrokerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string targetBrokerId = 2;</code>
+     * @return The bytes for targetBrokerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTargetBrokerIdBytes() {
+      java.lang.Object ref = targetBrokerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        targetBrokerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TIMESTAMP_FIELD_NUMBER = 3;
+    private long timestamp_ = 0L;
+    /**
+     * <code>int64 timestamp = 3;</code>
+     * @return The timestamp.
+     */
+    @java.lang.Override
+    public long getTimestamp() {
+      return timestamp_;
+    }
+
+    public static final int SEQNO_FIELD_NUMBER = 4;
+    private long seqNo_ = 0L;
+    /**
+     * <code>int64 seqNo = 4;</code>
+     * @return The seqNo.
+     */
+    @java.lang.Override
+    public long getSeqNo() {
+      return seqNo_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceBrokerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sourceBrokerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetBrokerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, targetBrokerId_);
+      }
+      if (timestamp_ != 0L) {
+        output.writeInt64(3, timestamp_);
+      }
+      if (seqNo_ != 0L) {
+        output.writeInt64(4, seqNo_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceBrokerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sourceBrokerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetBrokerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, targetBrokerId_);
+      }
+      if (timestamp_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, timestamp_);
+      }
+      if (seqNo_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, seqNo_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof PublicationOuterClass.Heartbeat)) {
+        return super.equals(obj);
+      }
+      PublicationOuterClass.Heartbeat other = (PublicationOuterClass.Heartbeat) obj;
+
+      if (!getSourceBrokerId()
+          .equals(other.getSourceBrokerId())) return false;
+      if (!getTargetBrokerId()
+          .equals(other.getTargetBrokerId())) return false;
+      if (getTimestamp()
+          != other.getTimestamp()) return false;
+      if (getSeqNo()
+          != other.getSeqNo()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SOURCEBROKERID_FIELD_NUMBER;
+      hash = (53 * hash) + getSourceBrokerId().hashCode();
+      hash = (37 * hash) + TARGETBROKERID_FIELD_NUMBER;
+      hash = (53 * hash) + getTargetBrokerId().hashCode();
+      hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTimestamp());
+      hash = (37 * hash) + SEQNO_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSeqNo());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static PublicationOuterClass.Heartbeat parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static PublicationOuterClass.Heartbeat parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static PublicationOuterClass.Heartbeat parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static PublicationOuterClass.Heartbeat parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static PublicationOuterClass.Heartbeat parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static PublicationOuterClass.Heartbeat parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static PublicationOuterClass.Heartbeat parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static PublicationOuterClass.Heartbeat parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static PublicationOuterClass.Heartbeat parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static PublicationOuterClass.Heartbeat parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static PublicationOuterClass.Heartbeat parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static PublicationOuterClass.Heartbeat parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(PublicationOuterClass.Heartbeat prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Heartbeat}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Heartbeat)
+        PublicationOuterClass.HeartbeatOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return PublicationOuterClass.internal_static_Heartbeat_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return PublicationOuterClass.internal_static_Heartbeat_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                PublicationOuterClass.Heartbeat.class, PublicationOuterClass.Heartbeat.Builder.class);
+      }
+
+      // Construct using PublicationOuterClass.Heartbeat.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sourceBrokerId_ = "";
+        targetBrokerId_ = "";
+        timestamp_ = 0L;
+        seqNo_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return PublicationOuterClass.internal_static_Heartbeat_descriptor;
+      }
+
+      @java.lang.Override
+      public PublicationOuterClass.Heartbeat getDefaultInstanceForType() {
+        return PublicationOuterClass.Heartbeat.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public PublicationOuterClass.Heartbeat build() {
+        PublicationOuterClass.Heartbeat result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public PublicationOuterClass.Heartbeat buildPartial() {
+        PublicationOuterClass.Heartbeat result = new PublicationOuterClass.Heartbeat(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(PublicationOuterClass.Heartbeat result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sourceBrokerId_ = sourceBrokerId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.targetBrokerId_ = targetBrokerId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.timestamp_ = timestamp_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.seqNo_ = seqNo_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof PublicationOuterClass.Heartbeat) {
+          return mergeFrom((PublicationOuterClass.Heartbeat)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(PublicationOuterClass.Heartbeat other) {
+        if (other == PublicationOuterClass.Heartbeat.getDefaultInstance()) return this;
+        if (!other.getSourceBrokerId().isEmpty()) {
+          sourceBrokerId_ = other.sourceBrokerId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTargetBrokerId().isEmpty()) {
+          targetBrokerId_ = other.targetBrokerId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getTimestamp() != 0L) {
+          setTimestamp(other.getTimestamp());
+        }
+        if (other.getSeqNo() != 0L) {
+          setSeqNo(other.getSeqNo());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sourceBrokerId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                targetBrokerId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                timestamp_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                seqNo_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sourceBrokerId_ = "";
+      /**
+       * <code>string sourceBrokerId = 1;</code>
+       * @return The sourceBrokerId.
+       */
+      public java.lang.String getSourceBrokerId() {
+        java.lang.Object ref = sourceBrokerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sourceBrokerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sourceBrokerId = 1;</code>
+       * @return The bytes for sourceBrokerId.
+       */
+      public com.google.protobuf.ByteString
+          getSourceBrokerIdBytes() {
+        java.lang.Object ref = sourceBrokerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sourceBrokerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sourceBrokerId = 1;</code>
+       * @param value The sourceBrokerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceBrokerId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sourceBrokerId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sourceBrokerId = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSourceBrokerId() {
+        sourceBrokerId_ = getDefaultInstance().getSourceBrokerId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sourceBrokerId = 1;</code>
+       * @param value The bytes for sourceBrokerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceBrokerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sourceBrokerId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object targetBrokerId_ = "";
+      /**
+       * <code>string targetBrokerId = 2;</code>
+       * @return The targetBrokerId.
+       */
+      public java.lang.String getTargetBrokerId() {
+        java.lang.Object ref = targetBrokerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          targetBrokerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string targetBrokerId = 2;</code>
+       * @return The bytes for targetBrokerId.
+       */
+      public com.google.protobuf.ByteString
+          getTargetBrokerIdBytes() {
+        java.lang.Object ref = targetBrokerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          targetBrokerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string targetBrokerId = 2;</code>
+       * @param value The targetBrokerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargetBrokerId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        targetBrokerId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string targetBrokerId = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTargetBrokerId() {
+        targetBrokerId_ = getDefaultInstance().getTargetBrokerId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string targetBrokerId = 2;</code>
+       * @param value The bytes for targetBrokerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargetBrokerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        targetBrokerId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long timestamp_ ;
+      /**
+       * <code>int64 timestamp = 3;</code>
+       * @return The timestamp.
+       */
+      @java.lang.Override
+      public long getTimestamp() {
+        return timestamp_;
+      }
+      /**
+       * <code>int64 timestamp = 3;</code>
+       * @param value The timestamp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimestamp(long value) {
+
+        timestamp_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 timestamp = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimestamp() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        timestamp_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long seqNo_ ;
+      /**
+       * <code>int64 seqNo = 4;</code>
+       * @return The seqNo.
+       */
+      @java.lang.Override
+      public long getSeqNo() {
+        return seqNo_;
+      }
+      /**
+       * <code>int64 seqNo = 4;</code>
+       * @param value The seqNo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSeqNo(long value) {
+
+        seqNo_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 seqNo = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSeqNo() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        seqNo_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:Heartbeat)
+    }
+
+    // @@protoc_insertion_point(class_scope:Heartbeat)
+    private static final PublicationOuterClass.Heartbeat DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new PublicationOuterClass.Heartbeat();
+    }
+
+    public static PublicationOuterClass.Heartbeat getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Heartbeat>
+        PARSER = new com.google.protobuf.AbstractParser<Heartbeat>() {
+      @java.lang.Override
+      public Heartbeat parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Heartbeat> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Heartbeat> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public PublicationOuterClass.Heartbeat getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Publication_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_Publication_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_DeliveryEnvelope_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_DeliveryEnvelope_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_DeliveryAck_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_DeliveryAck_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_BrokerReplication_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_BrokerReplication_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Heartbeat_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_Heartbeat_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1022,9 +5481,25 @@ public final class PublicationOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\021Publication.proto\"J\n\013Publication\022\021\n\tst" +
-      "ationid\030\001 \001(\t\022\014\n\004city\030\002 \001(\t\022\014\n\004temp\030\003 \001(" +
-      "\t\022\014\n\004wind\030\004 \001(\tb\006proto3"
+      "\n\021Publication.proto\"Y\n\013Publication\022\r\n\005pu" +
+      "bId\030\001 \001(\t\022\021\n\tstationid\030\002 \001(\t\022\014\n\004city\030\003 \001" +
+      "(\t\022\014\n\004temp\030\004 \001(\t\022\014\n\004wind\030\005 \001(\t\"\235\001\n\020Deliv" +
+      "eryEnvelope\022\022\n\ndeliveryId\030\001 \001(\t\022\r\n\005pubId" +
+      "\030\002 \001(\t\022\r\n\005subId\030\003 \001(\t\022\025\n\rownerBrokerId\030\004" +
+      " \001(\t\022\030\n\020targetNotifierId\030\005 \001(\t\022\r\n\005seqNo\030" +
+      "\006 \001(\003\022\027\n\017publicationData\030\007 \001(\014\"b\n\013Delive" +
+      "ryAck\022\022\n\ndeliveryId\030\001 \001(\t\022\025\n\rownerBroker" +
+      "Id\030\002 \001(\t\022\022\n\nnotifierId\030\003 \001(\t\022\024\n\014ackTimes" +
+      "tamp\030\004 \001(\003\"\222\002\n\021BrokerReplication\0220\n\004type" +
+      "\030\001 \001(\0162\".BrokerReplication.ReplicationTy" +
+      "pe\022\026\n\016sourceBrokerId\030\002 \001(\t\022\026\n\016targetBrok" +
+      "erId\030\003 \001(\t\022\021\n\ttimestamp\030\004 \001(\003\022\013\n\003key\030\005 \001" +
+      "(\t\022\017\n\007payload\030\006 \001(\014\"j\n\017ReplicationType\022\020" +
+      "\n\014SUBSCRIPTION\020\000\022\024\n\020PENDING_DELIVERY\020\001\022\020" +
+      "\n\014DELIVERY_ACK\020\002\022\016\n\nCHECKPOINT\020\003\022\r\n\tHEAR" +
+      "TBEAT\020\004\"]\n\tHeartbeat\022\026\n\016sourceBrokerId\030\001" +
+      " \001(\t\022\026\n\016targetBrokerId\030\002 \001(\t\022\021\n\ttimestam" +
+      "p\030\003 \001(\003\022\r\n\005seqNo\030\004 \001(\003b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1035,7 +5510,31 @@ public final class PublicationOuterClass {
     internal_static_Publication_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Publication_descriptor,
-        new java.lang.String[] { "Stationid", "City", "Temp", "Wind", });
+        new java.lang.String[] { "PubId", "Stationid", "City", "Temp", "Wind", });
+    internal_static_DeliveryEnvelope_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_DeliveryEnvelope_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_DeliveryEnvelope_descriptor,
+        new java.lang.String[] { "DeliveryId", "PubId", "SubId", "OwnerBrokerId", "TargetNotifierId", "SeqNo", "PublicationData", });
+    internal_static_DeliveryAck_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_DeliveryAck_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_DeliveryAck_descriptor,
+        new java.lang.String[] { "DeliveryId", "OwnerBrokerId", "NotifierId", "AckTimestamp", });
+    internal_static_BrokerReplication_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_BrokerReplication_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_BrokerReplication_descriptor,
+        new java.lang.String[] { "Type", "SourceBrokerId", "TargetBrokerId", "Timestamp", "Key", "Payload", });
+    internal_static_Heartbeat_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_Heartbeat_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_Heartbeat_descriptor,
+        new java.lang.String[] { "SourceBrokerId", "TargetBrokerId", "Timestamp", "SeqNo", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
