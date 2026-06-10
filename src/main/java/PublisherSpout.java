@@ -16,7 +16,7 @@ import org.apache.storm.tuple.Values;
 
 public class PublisherSpout extends BaseRichSpout {
     private static final long serialVersionUID = 1;
-    private static final int BROKER_COUNT = 10;
+    private static final int BROKER_COUNT = 3;
     private static final long EMIT_DELAY_MS = 1L;
     private SpoutOutputCollector collector;
     private final List<PublicationOuterClass.Publication> valueList = new ArrayList<>();
@@ -79,10 +79,12 @@ public class PublisherSpout extends BaseRichSpout {
             System.out.println("publisher_spout: emitting publication pubId=" + publication.getPubId()
                     + " (" + publicationSeq + "/" + this.valueList.size() + ") to " + targetBroker);
         this.collector.emit(new Values(targetBroker, timestamp, publication.toByteArray(), false));
-        try {
-            Thread.sleep(1);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
+        if (publicationSeq % 5 == 0) {
+            try {
+                Thread.sleep(1);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
         }
     }
 

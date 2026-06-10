@@ -20,7 +20,7 @@ class Stats
     static float match_number;
 }
 public class Main {
-    private static final int BROKER_COUNT = 10;
+    private static final int BROKER_COUNT = 3;
     private static final int NOTIFIER_COUNT = 3;
     private static final int SUBSCRIPTION_COUNT = 3;
 

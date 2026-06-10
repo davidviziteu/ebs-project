@@ -17,7 +17,7 @@ import org.objenesis.ObjenesisHelper;
 
 public class SubscriptionSpout extends BaseRichSpout {
     private static final long serialVersionUID = 1;
-    private static final int BROKER_COUNT = 10;
+    private static final int BROKER_COUNT = 3;
     private SpoutOutputCollector collector;
     private String task;
     private int i = 0;

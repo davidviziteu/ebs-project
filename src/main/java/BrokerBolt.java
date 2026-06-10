@@ -37,7 +37,7 @@ public class BrokerBolt extends BaseRichBolt {
     private static final long HEARTBEAT_INTERVAL_MS = 1200L;
     private static final long HEARTBEAT_TIMEOUT_MS = 5000L;
     private static final long SNAPSHOT_INTERVAL_MS = 1000L;
-    private static final int BROKER_COUNT = 10;
+    private static final int BROKER_COUNT = 3;
 
     private OutputCollector collector;
     private String brokerId;
