@@ -3,12 +3,14 @@ import org.apache.storm.LocalCluster;
 import org.apache.storm.generated.StormTopology;
 import org.apache.storm.topology.BoltDeclarer;
 import org.apache.storm.topology.TopologyBuilder;
+import org.apache.storm.tuple.Fields;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Comparator;
 import java.util.stream.Stream;
 
 class Stats
@@ -18,6 +20,10 @@ class Stats
     static float match_number;
 }
 public class Main {
+    private static final int BROKER_COUNT = 10;
+    private static final int NOTIFIER_COUNT = 3;
+    private static final int SUBSCRIPTION_COUNT = 3;
+
     private static void cleanupStateFiles() {
         Path tmpDir = Paths.get(System.getProperty("java.io.tmpdir"));
         try (Stream<Path> files = Files.list(tmpDir)) {
@@ -36,6 +42,22 @@ public class Main {
         } catch (Exception ex) {
             System.out.println("Failed state cleanup scan: " + ex.getMessage());
         }
+
+        Path stateDir = tmpDir.resolve("ebs-state");
+        if (Files.exists(stateDir)) {
+            try (Stream<Path> walk = Files.walk(stateDir)) {
+                walk.sorted(Comparator.reverseOrder())
+                        .forEach(path -> {
+                            try {
+                                Files.deleteIfExists(path);
+                            } catch (Exception ex) {
+                                System.out.println("Failed deleting state path " + path + ": " + ex.getMessage());
+                            }
+                        });
+            } catch (Exception ex) {
+                System.out.println("Failed ebs-state cleanup: " + ex.getMessage());
+            }
+        }
     }
 
     public static void main(String[] args) {
@@ -45,32 +67,35 @@ public class Main {
 
             builder.setSpout("publisher_spout", publisher);
 
-            for (int i = 1; i <= 3; ++i) {
+            for (int i = 1; i <= SUBSCRIPTION_COUNT; ++i) {
                 builder.setSpout("subscription" + i, new SubscriptionSpout(args[0]));
             }
-            for (int i = 1; i <= 3; ++i) {
+            for (int i = 1; i <= BROKER_COUNT; ++i) {
                 BoltDeclarer brokerDeclarer = builder
                         .setBolt("broker" + i, new BrokerBolt())
-                        .allGrouping("publisher_spout")
+                        .fieldsGrouping("publisher_spout", new Fields("target_broker"))
                         .shuffleGrouping("subscription1", "broker" + i)
                         .shuffleGrouping("subscription2", "broker" + i)
                         .shuffleGrouping("subscription3", "broker" + i)
-                        .shuffleGrouping("notifier1", "ack_stream")
-                        .shuffleGrouping("notifier2", "ack_stream")
-                        .shuffleGrouping("notifier3", "ack_stream");
+                        .fieldsGrouping("notifier1", "ack_stream", new Fields("owner_broker_id"))
+                        .fieldsGrouping("notifier2", "ack_stream", new Fields("owner_broker_id"))
+                        .fieldsGrouping("notifier3", "ack_stream", new Fields("owner_broker_id"));
 
-                for (int j = 1; j <= 3; j++) {
+                for (int j = 1; j <= BROKER_COUNT; j++) {
                     if (i == j) {
                         continue;
                     }
                     brokerDeclarer
-                            .shuffleGrouping("broker" + j, "replication_stream")
-                            .shuffleGrouping("broker" + j, "heartbeat_stream");
+                            .fieldsGrouping("broker" + j, "replication_stream", new Fields("target_broker"))
+                            .fieldsGrouping("broker" + j, "heartbeat_stream", new Fields("target_broker"));
                 }
             }
 
-            for (int i = 1; i <= 3; i++) {
-                builder.setBolt("notifier" + i, new NotifierBolt()).shuffleGrouping("broker1", "notifier" + i).shuffleGrouping("broker2", "notifier" + i).shuffleGrouping("broker3",  "notifier" + i);
+            for (int i = 1; i <= NOTIFIER_COUNT; i++) {
+                BoltDeclarer notifierDeclarer = builder.setBolt("notifier" + i, new NotifierBolt());
+                for (int b = 1; b <= BROKER_COUNT; b++) {
+                    notifierDeclarer.shuffleGrouping("broker" + b, "notifier" + i);
+                }
             }
 
 
@@ -85,7 +110,7 @@ public class Main {
             cluster.submitTopology("publish_subscribe_topology", config, topology);
 
             try {
-                Thread.sleep(100 * 1000);
+                Thread.sleep(180 * 1000);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }

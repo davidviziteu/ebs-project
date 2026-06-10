@@ -17,6 +17,7 @@ import org.objenesis.ObjenesisHelper;
 
 public class SubscriptionSpout extends BaseRichSpout {
     private static final long serialVersionUID = 1;
+    private static final int BROKER_COUNT = 10;
     private SpoutOutputCollector collector;
     private String task;
     private int i = 0;
@@ -41,8 +42,7 @@ public class SubscriptionSpout extends BaseRichSpout {
 
         // Initialize hash ring with available brokers (created here, after deserialization)
         this.hashRing = new HashRing();
-        int brokerCount = 3; // Default, can be made configurable
-        for (int j = 1; j <= brokerCount; j++) {
+        for (int j = 1; j <= BROKER_COUNT; j++) {
             hashRing.addNode("broker" + j);
         }
 
@@ -100,12 +100,8 @@ public class SubscriptionSpout extends BaseRichSpout {
     }
 
     public void declareOutputFields(OutputFieldsDeclarer declarer) {
-        // Declare streams for all possible brokers (can be made dynamic)
-        declarer.declareStream("broker1", new Fields("subscription"));
-        declarer.declareStream("broker2", new Fields("subscription"));
-        declarer.declareStream("broker3", new Fields("subscription"));
-        // Add more brokers if needed:
-        // declarer.declareStream("broker4", new Fields("subscription"));
-        // declarer.declareStream("broker5", new Fields("subscription"));
+        for (int i = 1; i <= BROKER_COUNT; i++) {
+            declarer.declareStream("broker" + i, new Fields("subscription"));
+        }
     }
 }
